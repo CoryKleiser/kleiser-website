@@ -64,12 +64,21 @@ body{
 }
 
 /*TODO: WORKS STYLES*/
+#works {
+    padding-bottom: 30px;
+}
 #works h1{
     font-family: Georgia, serif;
     font-size: 4em;
     font-weight: bold;
     text-align:center;
 }
+#works section{
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+}
+
 
 
 /*TODO: ABOUT STYLES*/
@@ -88,7 +97,8 @@ body{
 #about h1 strong{
     font-size:1.2em;
     font-style: italic;
-}#about h1 b{
+}
+#about h1 b{
     font-size:2em;
 }
 #about h2{
