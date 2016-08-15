@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="kleiserWebApp">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,181 +40,28 @@
             <div class="collapse navbar-collapse"
                  id="hidemenu">
                 <ul class="nav navbar-nav">
-                    <li><a href="#intro">Home</a></li>
+                    <li><a href="#/intro/">Home</a></li>
 
-                    <li><a href="#works">Work</a></li>
+                    <li><a href="#/work/">Work</a></li>
 
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#/about/">About</a></li>
 
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#/contact/">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!--SITE INTRO-->
-    <section id="intro">
-        <div class="container-fluid">
 
-                <div class="span12 text-center">
-                    <h1>HELLO!</h1>
-                    <h2>Welcome, I'm Cory Kleiser</h2>
-                    <h3>Developer | Programmer | Artist</h3>
-                    <span>I strive to create eloquent <strong>code</strong> that&nbsp;is&nbsp;highly&nbsp;<strong>functional</strong></span>
-
-                    <ul class="list-unstyled">
-                        <li>Knowledge is Attainable</li>
-                        <li>Opportunity is Endless</li>
-                        <li>Greatness is Achievable</li>
-                        <li>Settle for Nothing Less</li>
-                    </ul>
-
-                </div>
-
-        </div>
-    </section>
-
-
-    <!--HTML CANVAS ANIMATION-->
-    <section id="creepyeye">
-        <div class="container-fluid hidden-xs">
-            <div class="col-sm-8 col-sm-offset-2">
-                <div class="canvas-container">
-                    <canvas id="canvas" width="404px" height="400px">
-                        <span>Your browser does not support this feature</span>
-                    </canvas>
-                    <h3 class="hidden-xs">Look Into Every Angle</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!--WORK SECTION-->
-    <!--TODO:insert app or atleast link to github.-->
-    <section id="works">
-        <div class="container-fluid">
-            <h1>Work</h1>
-            <section class="featurework col-sm-4" id="tadoo">
-                <a href="https://github.com/CoryKleiser/tadoo" target="_blank" title="Click to view code on github!">
-                    <img src="images/tadoo.png" class="img-responsive center-block" alt="View Tadoo! app code on github.">
-                </a>
-            </section>
-            <section class="featurework col-sm-4" id="greatpicks">
-                <a href="https://github.com/CoryKleiser/great-picks" target="_blank" title="Click to view code on github!">
-                    <img src="images/greatpicks-code.png" class="img-responsive center-block" alt="View Great Picks code on github.">
-                </a>
-            </section>
-            <section class="featurework col-sm-4" id="contactlist">
-                <a href="https://github.com/CoryKleiser/offline-ready-contact-list" target="_blank" title="Click to view code on github!">
-                    <img src="images/contactlist-code.png" class="img-responsive center-block" alt="View offline ready contact list application on github.">
-                </a>
-            </section>
-        </div>
-    </section>
-
-    <!--ABOUT SECTION-->
-    <section id="about">
-        <div class="container">
-            <div class="span12 text-center">
-            <!--TODO:Add Intro Sentence-->
-                <h1 class="col-sm-8 col-sm-offset-2"><b>About</b></h1>
-                <h1 class="col-sm-8 col-sm-offset-2"><strong>Cory&nbsp;Kleiser</strong> is currently a student at the University&nbsp;of&nbsp;Cincinnati.</h1>
-            </div>
-            <div class="span12 text-center">
-                <section class="col-xs-12 col-sm-6 col-lg-3">
-                    <div class="col-xs-12 well">
-                    <h2>Programmer</h2>
-                    <p>I have great familiarity with an object oriented approach to design and development.
-                        Most of my experience derives from developing applications on the client-side.
-                        My language of choice is most definitely javascript and it's various frameworks.</p>
-                    </div>
-                </section>
-                <section class="col-xs-12 col-sm-6 col-lg-3">
-                    <div class="col-xs-12 well">
-                    <h2>Multimedia Producer</h2>
-                    <p>Although my studies are focused on web, I am a competent producer of various mediums.
-                        I don't consider myself an expert photographer or videographer,
-                        however the experience I have gained in these fields is greatly useful when developing responsive applications.</p>
-                    </div>
-                </section>
-                <section class="col-xs-12 col-sm-6 col-lg-3">
-                    <div class="col-xs-12 well">
-                    <h2>Musician</h2>
-                    <p>When I was 5 years old I began playing my first instrument and never really stopped.
-                        My love for playing music eventually spilled over into the studio. I am a proud member of the
-                        Audio Engineering Society (AES),
-                        and the former Vice President of AES, University of Cincinnati section.</p>
-                    </div>
-                </section>
-                <section class="col-xs-12 col-sm-6 col-lg-3">
-                    <div class="col-xs-12 well">
-                    <h2>Traveler</h2>
-                    <p>Whether I'm going to see family or just going to go, traveling is another one of my passions.
-                        I truly enjoy exploring things I have never seen. I'm always looking to a new experience.
-                        The feeling is even better when you share the experience with friends and family.</p>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-    <section id="contact">
-        <div class="container">
-            <h1>Contact</h1>
-            <form class="form-horizontal" method="GET" action="mailto:cory.kleiser@gmail.com" enctype="text/plain">
-
-
-                <fieldset class="disabled"><legend class="text-left">Your Info</legend>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label" for="inputName">Name</label>
-                        <div class="col-sm-8">
-                            <input class="form-control" type="text" id="inputName" placeholder="Full Name">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label" for="inputEmail">Email</label>
-                        <div class="col-sm-8">
-                            <input class="form-control" type="email" id="inputEmail" placeholder="Email Address">
-                        </div>
-                    </div>
-                </fieldset>
-
-
-                <fieldset class="disabled"><legend class="text-left">Message Info</legend>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Subject</label>
-                        <div class="col-sm-8">
-                            <input class="form-control" name="subject" type="text" id="inputSubject" placeholder="Subject">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label" for="inputMessage">Your Message</label>
-                        <div class="col-sm-8">
-                            <textarea class="form-control" name="body" id="inputMessage" placeholder="Message Body"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-8 col-sm-offset-2">
-                            <input class="btn btn-default pull-right" type="submit" value="Send">
-                        </div>
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-    </section>
-
-
+    <!--VARIABLE CONTENT-->
+    <div class="KleiserWepApp" ng-view></div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="js/creepyEye.js" charset="utf-8"></script>
+    <script src="libs/angular.min.js" charset="utf-8"></script>
+    <script src="libs/angular-route.min.js" charset="utf-8"></script>
+    <!--<script src="js/creepyEye.js" charset="utf-8"></script>-->
 </body>
 </html>
