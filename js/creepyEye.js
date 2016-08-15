@@ -4,7 +4,7 @@ var canvas = document.getElementById('canvas');
 
 // : Set up canvas for use
 
-canvas.width = canvas.width;
+canvas.width = canvas.scrollWidth;
 canvas.height = canvas.scrollHeight;
 var ctx = canvas.getContext('2d');
 //animate variable

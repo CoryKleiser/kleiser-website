@@ -1,5 +1,6 @@
-const kleiserWebApp = angular.module(`kleiserWebApp`, [
+var kleiserWebApp = angular.module(`kleiserWebApp`, [
     `ngRoute`,
+    `pageControllers`
 ]);
 
 kleiserWebApp.config([`$routeProvider`, function ($routeProvider) {
