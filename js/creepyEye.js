@@ -27,16 +27,16 @@ function drawMainTriangle() {
     ctx.fillStyle = '#acffff';
         //outside
     ctx.beginPath();
-    ctx.moveTo(4, 400);
-    ctx.lineTo(204, 80);
-    ctx.lineTo(404, 400);
+    ctx.moveTo(3.5, 350);
+    ctx.lineTo(178.5, 70);
+    ctx.lineTo(355, 350);
     ctx.closePath();
     ctx.stroke();
         //inside
     ctx.beginPath();
-    ctx.moveTo(12, 396);
-    ctx.lineTo(204, 88);
-    ctx.lineTo(396, 396);
+    ctx.moveTo(11, 346.5);
+    ctx.lineTo(178.5, 80);
+    ctx.lineTo(346.5, 346.5);
     ctx.closePath();
     ctx.fill();
     ctx.stroke();
@@ -46,11 +46,11 @@ function drawMainTriangle() {
 
 //eye thing
 var eye = {
-    'x': 204,
-    'bottomLineY': 149.6,
-    'topLineY': 320,
-    'irisY': 225.6,
-    'pupilY': 224,
+    'x': 178.5,
+    'bottomLineY': 130.9,
+    'topLineY': 280,
+    'irisY': 197.4,
+    'pupilY': 196,
 };
 
     //eye functions
@@ -79,26 +79,26 @@ function eyeOutline(radius){
 //DRAW EYE
 function drawEye(x,bottomLineY,topLineY,irisY,pupilY) {
 //outline
-    var eyeOutlineRadius = 120;
+    var eyeOutlineRadius = 105;
     eyeOutline(eyeOutlineRadius);
         //pupil
     ctx.fillStyle = '#38a6a6';
     ctx.beginPath();
-    ctx.arc(eye.x, eye.irisY, 32, 5.4979, 3.927);
+    ctx.arc(eye.x, eye.irisY, 28, 5.4979, 3.927);
     ctx.fill();
     ctx.fillStyle = 'black';
     ctx.beginPath();
-    ctx.arc(eye.x, eye.pupilY, 20, 5.4979, 3.927);
+    ctx.arc(eye.x, eye.pupilY, 17.5, 5.4979, 3.927);
     ctx.fill();
     ctx.beginPath();
-    ctx.moveTo(eye.x-16,eye.x+12);
-    ctx.lineTo(eye.x+16,eye.x+12);
-    ctx.lineTo(eye.x+24,eye.x-2.4);
-    ctx.lineTo(eye.x-24,eye.x-2.4);
+    ctx.moveTo(eye.x-14,eye.x+10.5);
+    ctx.lineTo(eye.x+14,eye.x+10.5);
+    ctx.lineTo(eye.x+21,eye.x-2.1);
+    ctx.lineTo(eye.x-21,eye.x-2.1);
     ctx.fill();
     ctx.beginPath()
     ctx.arc(eye.x, eye.irisY, 15, 0, Math.PI*2);
-    ctx.fillStyle = 'red';
+    ctx.fillStyle = 'fill';
     ctx.fill();
     ctx.beginPath()
     ctx.arc(eye.x, eye.irisY, 7, 0, Math.PI*2);
@@ -106,23 +106,23 @@ function drawEye(x,bottomLineY,topLineY,irisY,pupilY) {
     ctx.fill();
 }
 
-//redBackgroundFUnction
-var red = false;
-function redTriangleFunction(){
-    if (!red){
-        red = true;
+//fillBackgroundFUnction
+var fill = false;
+function fillTriangleFunction(){
+    if (!fill){
+        fill = true;
 
-        ctx.fillStyle = 'red';
+        ctx.fillStyle = '#c7d8ff';
         ctx.beginPath();
-        ctx.moveTo(12, 396);
-        ctx.lineTo(204, 88);
-        ctx.lineTo(396, 396);
+        ctx.moveTo(10.5, 346.5);
+        ctx.lineTo(178.5, 77);
+        ctx.lineTo(346.5, 346.5);
         ctx.closePath();
         ctx.fill();
         drawEye();
     }
     else {
-        red = false;
+        fill = false;
         drawMainTriangle();
         switcher();
     }
@@ -132,39 +132,39 @@ function redTriangleFunction(){
 //small inner triangles
 function fillTriangles() {
     function drawTriangles(max, x, y) {
-        for (x; x < max; x = x + 38.4) {
+        for (x; x < max; x = x + 33.6) {
             ctx.beginPath()
             ctx.moveTo(x, y);
-            ctx.lineTo(x + 19.2, y - 30.8);
-            ctx.lineTo(x + 38.4, y);
+            ctx.lineTo(x + 16.8, y - 26.95);
+            ctx.lineTo(x + 33.6, y);
             ctx.fill();
         }
     }
-        var x = 12.8;
-        var y = 395.2;
-    for (var max = 376.8; max >= 204; max=max-19.2){
+        var x = 11.2;
+        var y = 345.8;
+    for (var max = 329.7; max >= 160; max=max-16.8){
         drawTriangles(max,x,y);
-        x=x+19.2;
-        y=y-30.8;
+        x=x+16.8;
+        y=y-26.95;
     }
 }
 function fillInvertedTriangles() {
     function drawInvertedTriangles(max, x, y) {
-        for (x; x < max; x = x + 38.4) {
+        for (x; x < max; x = x + 33.6) {
             ctx.beginPath()
             ctx.moveTo(x, y);
-            ctx.lineTo(x + 19.2, y + 30.8);
-            ctx.lineTo(x + 38.4, y);
+            ctx.lineTo(x + 16.8, y + 26.95);
+            ctx.lineTo(x + 33.6, y);
             ctx.fill();
         }
     }
 
-    x = 32;
-    y = 364.4;
-    for (var max = 376.8; max >= 204; max = max - 19.2) {
+    x = 28;
+    y = 318.85;
+    for (var max = 329.7; max >= 160; max = max - 16.8) {
         drawInvertedTriangles(max, x, y);
-        x = x + 19.2;
-        y = y - 30.8;
+        x = x + 16.8;
+        y = y - 26.95;
     }
 }
 
@@ -188,7 +188,7 @@ function switcher() {
     }
     drawEye();
     setTimeout(function () {
-        if(red){
+        if(fill){
             return;
         }
         switcher();
@@ -228,7 +228,7 @@ var animateEye = function (prop, val, duration) {
 //TODO: make eye move around triab
 var eyeAnimation = function(){
     // renderEye();
-    redTriangleFunction();
+    fillTriangleFunction();
     animateEye(eye.x, 0, 100);
     animateEye(eye.y, 0, 100);
     animateEye(eye.topLineY, 0, 100);
