@@ -1,6 +1,8 @@
+'use strict'
 var kleiserWebApp = angular.module(`kleiserWebApp`, [
     `ngRoute`,
-    `pageControllers`
+    `pageControllers`,
+    `pageServices`
 ]);
 
 kleiserWebApp.config([`$routeProvider`, function ($routeProvider) {
@@ -20,7 +22,7 @@ kleiserWebApp.config([`$routeProvider`, function ($routeProvider) {
         }).
         when(`/contact`, {
             templateUrl: `partials/contact.html`,
-            controller: `Contact Controller`
+            controller: `ContactController`
         }).
         otherwise({
             redirectTo: `/intro`
