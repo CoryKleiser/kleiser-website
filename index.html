@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="kleiserWebApp">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
+
 </head>
-<body>
+<body ng-app="kleiserWebApp">
 
 
 
@@ -40,13 +41,13 @@
             <div class="collapse navbar-collapse"
                  id="hidemenu">
                 <ul class="nav navbar-nav">
-                    <li><a href="#/intro/">Home</a></li>
+                    <li><a href="#/intro">Home</a></li>
 
-                    <li><a href="#/work/">Work</a></li>
+                    <li><a href="#/work">Work</a></li>
 
-                    <li><a href="#/about/">About</a></li>
+                    <li><a href="#/about">About</a></li>
 
-                    <li><a href="#/contact/">Contact</a></li>
+                    <li><a href="#/contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -54,14 +55,21 @@
 
 
     <!--VARIABLE CONTENT-->
-    <div class="KleiserWepApp" ng-view></div>
+    <div class="main" ng-view>Loading...</div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
     <script src="libs/angular.min.js" charset="utf-8"></script>
     <script src="libs/angular-route.min.js" charset="utf-8"></script>
+
     <!--<script src="js/creepyEye.js" charset="utf-8"></script>-->
+
+    <script src="js/KleiserWebAppControllers.js"></script>
+    <script src="js/KleiserWebPage.js"></script>
+
+
 </body>
 </html>

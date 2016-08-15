@@ -21,8 +21,14 @@ body{
     border:none;
 }
 
+/*TODO:NAV STYLES*/
+.navbar{
+    margin-bottom:0;
+}
 
-/*TODO: INTRO STYLES*/
+
+
+/*: INTRO STYLES*/
 #intro{
     background: -webkit-linear-gradient(#3b5ba6, #38a6a6, #38a638);
     -webkit-background-clip: text;
@@ -30,10 +36,11 @@ body{
     width:100%;
 }
 
-#intro h1{
+h1{
     color:#3b5ba6;
     font-size:5em;
     font-family:Georgia, serif;
+    text-align:center;
 }
 #intro h2{
     color: #5484b7;
@@ -67,12 +74,12 @@ body{
 #works {
     padding-bottom: 30px;
 }
-#works h1{
-    font-family: Georgia, serif;
-    font-size: 4em;
-    font-weight: bold;
-    text-align:center;
-}
+/*#works h1{*/
+    /*font-family: Georgia, serif;*/
+    /*font-size: 4em;*/
+    /*font-weight: bold;*/
+    /*text-align:center;*/
+/*}*/
 #works section{
     -webkit-border-radius:4px;
     -moz-border-radius:4px;
@@ -90,8 +97,6 @@ body{
     padding-bottom: 50px;
 }
 #about h1{
-    font-family: Georgia, serif;
-    font-size: 2em;
     color: #ececec;
 }
 #about h1 strong{
