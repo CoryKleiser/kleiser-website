@@ -1,31 +1,29 @@
-'use strict'
-var kleiserWebApp = angular.module(`kleiserWebApp`, [
-    `ngRoute`,
-    `pageControllers`,
-    `pageServices`
-]);
+'use strict';
+(function() {
+    var kleiserWebApp = angular.module(`kleiserWebApp`, [
+        `ui.router`,
+        `pageControllers`,
+        `pageServices`
+    ]);
 
-kleiserWebApp.config([`$routeProvider`, function ($routeProvider) {
-
-    $routeProvider.
-        when(`/intro`, {
+    kleiserWebApp.config(function ($urlRouterProvider, $stateProvider) {
+        $urlRouterProvider.otherwise(`/intro`);
+        $stateProvider.state(`/intro`, {
+            url: `/intro`,
             templateUrl: `partials/intro.html`,
-            controller: `IntroController`
-        }).
-        when(`/work`, {
+            controller: `IntroController`,
+        }).state(`/work`, {
+            url: `/work`,
             templateUrl: `partials/work.html`,
             controller: `WorkController`
-        }).
-        when(`/about`, {
+        }).state(`/about`, {
+            url: `/about`,
             templateUrl: `partials/about.html`,
             controller: `AboutController`
-        }).
-        when(`/contact`, {
+        }).state(`/contact`, {
+            url: `/contact`,
             templateUrl: `partials/contact.html`,
             controller: `ContactController`
-        }).
-        otherwise({
-            redirectTo: `/intro`
-        });
-    
-}]);
+        })
+    });
+})();
