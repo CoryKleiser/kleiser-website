@@ -1,5 +1,7 @@
 'use strict';
 (function() {
+
+
     var pageServices = angular.module(`pageServices`, []);
 
     pageServices.service(`draw`, function () {
@@ -257,4 +259,25 @@
 
 
     });
+
+    pageServices.service(`sendEmail`, function ($http) {
+        var sendEmail = this;
+
+
+
+        sendEmail.send = function(contactData) {
+
+
+
+                $http.post('scripts/contact.php', contactData)
+                    .success(alert(`YAAAYYY!!!`))
+                    .error(alert(`NOOOOOOOO!`));
+
+
+        };
+    });
+
+
+
 })();
+

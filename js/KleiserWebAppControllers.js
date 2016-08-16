@@ -14,8 +14,18 @@
     pageControllers.controller(`AboutController`, function ($scope) {
         //TODO: intro controller logic
     });
-    pageControllers.controller(`ContactController`, function ($scope) {
+    pageControllers.controller(`ContactController`, function ($scope, sendEmail) {
         //TODO: intro controller logic
+        $scope.contactData = {
+            'name': '',
+            'email': '',
+            'subject': '',
+            'message': ''
+        };
+
+        $scope.submit = function(){
+            sendEmail.send($scope.contactData);
+        }
     });
 
 })();
