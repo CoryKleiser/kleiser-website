@@ -9,23 +9,22 @@
         $rootScope.$on(`$stateChangeSuccess`, draw.drawAnimation());
     });
     pageControllers.controller(`WorkController`, function ($scope) {
-        //TODO: intro controller logic
+        //TODO: work controller logic
     });
     pageControllers.controller(`AboutController`, function ($scope) {
-        //TODO: intro controller logic
+        //TODO: about controller logic
     });
-    pageControllers.controller(`ContactController`, function ($scope, sendEmail) {
-        //TODO: intro controller logic
-        $scope.contactData = {
-            'name': '',
-            'email': '',
-            'subject': '',
-            'message': ''
+    pageControllers.controller(`ContactController`, function ($scope, messageFactory) {
+        //: contact controller logic
+        $scope.contactData = {};
+
+
+        $scope.submit = function() {
+
+            $scope.contactData = messageFactory.post($scope.contactData);
+
         };
 
-        $scope.submit = function(){
-            sendEmail.send($scope.contactData);
-        }
     });
 
 })();
