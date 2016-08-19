@@ -8,22 +8,26 @@
 
     kleiserWebApp.config(function ($urlRouterProvider, $stateProvider) {
         $urlRouterProvider.otherwise(`/intro`);
-        $stateProvider.state(`/intro`, {
+        $stateProvider
+            .state(`/intro`, {
             url: `/intro`,
             templateUrl: `partials/intro.html`,
             controller: `IntroController`,
-        }).state(`/work`, {
+            })
+            .state(`/work`, {
             url: `/work`,
             templateUrl: `partials/work.html`,
             controller: `WorkController`
-        }).state(`/about`, {
+            })
+            .state(`/about`, {
             url: `/about`,
             templateUrl: `partials/about.html`,
             controller: `AboutController`
-        }).state(`/contact`, {
+            })
+            .state(`/contact`, {
             url: `/contact`,
             templateUrl: `partials/contact.html`,
             controller: `ContactController`
-        })
+            })
     });
 })();
