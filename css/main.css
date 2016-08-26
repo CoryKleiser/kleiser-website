@@ -7,8 +7,7 @@ body{
 }
 
 .bgimage{
-    background-image: url('../images/bug_on_leaf.jpg');
-    background-position:center center;
+    background: url('../images/bug_on_leaf.jpg') no-repeat center center;
     background-size: cover;
     height:200px;
 }
@@ -116,8 +115,7 @@ h1{
 /*TODO: ABOUT STYLES*/
 
 #about {
-    background-image: url('../images/about-bg1.jpg');
-    background-position: center center;
+    background: url('../images/about-bg1.jpg') no-repeat center center;
     background-size: cover;
     padding-bottom: 50px;
 }
@@ -132,7 +130,7 @@ h1{
     font-size:2em;
 }
 #about h2{
-    font-size: 1.6em;
+    font-size: 1.5em;
 }
 #about section{
     /*max-width: 450px;*/
