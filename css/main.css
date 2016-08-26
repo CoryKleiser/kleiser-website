@@ -84,9 +84,34 @@ h1{
     -webkit-border-radius:4px;
     -moz-border-radius:4px;
     border-radius:4px;
+    padding-top:10px;
+    padding-bottom:10px;
 }
-
-
+#feature1{
+    background: #000 url("../images/tadoo-btnbg.jpg") no-repeat center center;
+    color:#ececec;
+    background-size: cover;
+    width: 100%;
+    text-align: left;
+}
+#feature2{
+    background: #000 url("../images/greatpicks-btnbg.png") no-repeat center center;
+    color:#ececec;
+    background-size: cover;
+    width: 100%;
+    text-align: left;
+}
+#feature3{
+    background: #000 url("../images/contactlist-btnbg.png") no-repeat center center;
+    color:#ececec;
+    background-size: cover;
+    width: 100%;
+    text-align: left;
+}
+#works p{
+    min-width: 100%;
+    text-align: center;
+}
 
 /*TODO: ABOUT STYLES*/
 
