@@ -36,10 +36,13 @@ body{
 }
 
 h1{
-    color:#3b5ba6;
+    color:#000;
     font-size:5em;
     font-family:Georgia, serif;
     text-align:center;
+}
+#intro h1{
+    color:#3b5ba6;
 }
 #intro h2{
     color: #5484b7;
