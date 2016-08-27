@@ -1,3 +1,6 @@
 #Ignore Files
 .idea/*
 .DS_Store
+node_modules/*
+package.json
+scripts/*
