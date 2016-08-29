@@ -35,16 +35,16 @@
             ctx.fillStyle = '#acffff';
             //outside
             ctx.beginPath();
-            ctx.moveTo(3.5, 350);
-            ctx.lineTo(178.5, 70);
-            ctx.lineTo(355, 350);
+            ctx.moveTo(3.15, 315);
+            ctx.lineTo(160.65, 63);
+            ctx.lineTo(319.5, 315);
             ctx.closePath();
             ctx.stroke();
             //inside
             ctx.beginPath();
-            ctx.moveTo(11, 346.5);
-            ctx.lineTo(178.5, 80);
-            ctx.lineTo(346.5, 346.5);
+            ctx.moveTo(9.9, 311.85);
+            ctx.lineTo(160.65, 72);
+            ctx.lineTo(311.85, 311.85);
             ctx.closePath();
             ctx.fill();
             ctx.stroke();
@@ -54,14 +54,14 @@
 
 //eye thing
         var eye = {
-            'x': 178.5,
-            'bottomLineY': 130.9,
-            'topLineY': 280,
-            'irisY': 197.4,
-            'pupilY': 196,
+            'x': 160.65,
+            'bottomLineY': 117.81,
+            'topLineY': 252,
+            'irisY': 177.66,
+            'pupilY': 176.4,
         };
 
-        //eye functions
+        //TODO: eye functions
         function eyeOutline(radius) {
             var rad = radius;
             ctx.strokeStyle = 'black';
@@ -87,7 +87,7 @@
 //DRAW EYE
         function drawEye(x, bottomLineY, topLineY, irisY, pupilY) {
 //outline
-            var eyeOutlineRadius = 105;
+            var eyeOutlineRadius = 94.5;
             eyeOutline(eyeOutlineRadius);
             //pupil
             ctx.fillStyle = '#38a6a6';
@@ -123,9 +123,9 @@
 
                 ctx.fillStyle = '#c7d8ff';
                 ctx.beginPath();
-                ctx.moveTo(10.5, 346.5);
-                ctx.lineTo(178.5, 77);
-                ctx.lineTo(346.5, 346.5);
+                ctx.moveTo(9.45, 311.85);
+                ctx.lineTo(160.65, 69.3);
+                ctx.lineTo(311.85, 311.85);
                 ctx.closePath();
                 ctx.fill();
                 drawEye();
@@ -141,41 +141,41 @@
 //small inner triangles
         function fillTriangles() {
             function drawTriangles(max, x, y) {
-                for (x; x < max; x = x + 33.6) {
+                for (x; x < max; x = x + 30.24) {
                     ctx.beginPath()
                     ctx.moveTo(x, y);
-                    ctx.lineTo(x + 16.8, y - 26.95);
-                    ctx.lineTo(x + 33.6, y);
+                    ctx.lineTo(x + 15.12, y - 24.255);
+                    ctx.lineTo(x + 30.24, y);
                     ctx.fill();
                 }
             }
 
-            var x = 11.2;
-            var y = 345.8;
-            for (var max = 329.7; max >= 160; max = max - 16.8) {
+            var x = 10.08;
+            var y = 311.22;
+            for (var max = 296.73; max >= 144; max = max - 15.12) {
                 drawTriangles(max, x, y);
-                x = x + 16.8;
-                y = y - 26.95;
+                x = x + 15.12;
+                y = y - 24.255;
             }
         }
 
         function fillInvertedTriangles() {
             function drawInvertedTriangles(max, x, y) {
-                for (x; x < max; x = x + 33.6) {
+                for (x; x < max; x = x + 30.24) {
                     ctx.beginPath()
                     ctx.moveTo(x, y);
-                    ctx.lineTo(x + 16.8, y + 26.95);
-                    ctx.lineTo(x + 33.6, y);
+                    ctx.lineTo(x + 15.12, y + 24.255);
+                    ctx.lineTo(x + 30.24, y);
                     ctx.fill();
                 }
             }
 
-            var x = 28;
-            var y = 318.85;
-            for (var max = 329.7; max >= 160; max = max - 16.8) {
+            var x = 25.2;
+            var y = 286.965;
+            for (var max = 296.73; max >= 144; max = max - 15.12) {
                 drawInvertedTriangles(max, x, y);
-                x = x + 16.8;
-                y = y - 26.95;
+                x = x + 15.12;
+                y = y - 24.255;
             }
         }
 
