@@ -136,6 +136,7 @@ h1{
 }
 #about h2{
     font-size: 1.5em;
+    padding-bottom: 15px;
 }
 #about section{
     /*max-width: 450px;*/
