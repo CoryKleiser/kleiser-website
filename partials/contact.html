@@ -2,6 +2,8 @@
 <section id="contact">
     <div class="container-fluid">
         <h1>Contact</h1>
+        <h3 class="text-danger">This page is under construction.</h3>
+        <h5>In the mean time, please contact me at <a href="mailto:contact@kleiser.io"><b class="text-primary">contact@kleiser.io</b></a></h5>
         <form class="form-horizontal" method="POST" ng-submit="submit()">
 
 
@@ -9,14 +11,14 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label" for="inputName">Name</label>
                     <div class="col-sm-8">
-                        <input class="form-control" type="text" id="inputName" name="inputName" placeholder="Full Name" ng-model="contactData.name">
+                        <input class="form-control" type="text" id="inputName" name="inputName" placeholder="Full Name" ng-model="contactData.name" disabled>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-sm-2 control-label" for="inputEmail">Email</label>
                     <div class="col-sm-8">
-                        <input class="form-control" type="email" id="inputEmail" name="inputEmail" placeholder="Email Address" ng-model="contactData.email">
+                        <input class="form-control" type="email" id="inputEmail" name="inputEmail" placeholder="Email Address" ng-model="contactData.email" disabled>
                     </div>
                 </div>
             </fieldset>
@@ -26,18 +28,18 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label">Subject</label>
                     <div class="col-sm-8">
-                        <input class="form-control" name="inputSubject" type="text" id="inputSubject" placeholder="Subject" ng-model="contactData.subject">
+                        <input class="form-control" name="inputSubject" type="text" id="inputSubject" placeholder="Subject" ng-model="contactData.subject" disabled>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-2 control-label" for="inputMessage">Your Message</label>
                     <div class="col-sm-8">
-                        <textarea class="form-control" name="inputMessage" id="inputMessage" placeholder="Message Body" ng-model="contactData.message"></textarea>
+                        <textarea class="form-control" name="inputMessage" id="inputMessage" placeholder="Message Body" ng-model="contactData.message" disabled></textarea>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-sm-8 col-sm-offset-2">
-                        <input class="btn btn-default pull-right" type="submit" id="submitEmail" name="submitEmail" value="Send">
+                        <input class="btn btn-default pull-right" type="submit" id="submitEmail" name="submitEmail" value="Send" disabled>
                     </div>
                 </div>
             </fieldset>

@@ -59,8 +59,10 @@ h1{
 #welcome{
     background: -webkit-linear-gradient(#3b5ba6, #38a6a6, #38a638);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /*-webkit-text-fill-color: transparent;*/
     width:100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -164,14 +166,24 @@ h1{
 
 /*TODO: MOBILE WORKS STYLES*/
 @media (max-width: 767px) {
-    header nav .main{
-        float: left;
-        padding:0;
-        width: 94%;
-        margin:3%;
-    }
     .img-responsive{
         max-width:80%;
         padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 377px) {
+    #intro h2{
+        font-size: 1.2em;
+    }
+    #intro h3{
+        font-size: 1.4em;
+    }
+    #intro span{
+        font-size: 1.3em;
+    }
+    #intro ul{
+        font-size: 1.1em;
+        font-weight: normal;
     }
 }
