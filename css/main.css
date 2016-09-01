@@ -156,7 +156,7 @@ h1{
 #status{
     color:#ececec;
 }
-/*TODO: CONTACT STYLES*/
+/*: CONTACT STYLES*/
 #contact{
     text-align:center;
 }
@@ -164,7 +164,7 @@ h1{
 
 
 
-/*TODO: MOBILE WORKS STYLES*/
+/*: MOBILE WORKS STYLES*/
 @media (max-width: 767px) {
     .img-responsive{
         max-width:80%;
