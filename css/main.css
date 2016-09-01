@@ -79,12 +79,12 @@ h1{
 #works {
     padding-bottom: 30px;
 }
-/*#works h1{*/
-    /*font-family: Georgia, serif;*/
-    /*font-size: 4em;*/
-    /*font-weight: bold;*/
-    /*text-align:center;*/
-/*}*/
+#works .container-fluid{
+    padding:0;
+}
+legend{
+    padding-left:15px;
+}
 #works section{
     -webkit-border-radius:4px;
     -moz-border-radius:4px;
@@ -116,6 +116,10 @@ h1{
 #works p{
     min-width: 100%;
     text-align: center;
+}
+iframe{
+    border: 1px solid #ccc;
+    margin: 15px;
 }
 
 /*TODO: ABOUT STYLES*/
@@ -156,23 +160,96 @@ h1{
 #status{
     color:#ececec;
 }
+
+
+
 /*: CONTACT STYLES*/
 #contact{
     text-align:center;
 }
 
+/*Media Queries*/
+/*for medium-large screens*/
+@media (max-width: 1150px) {
+    #soundDesign {
+        width: 960px;
+        height: 198px;
+    }
+}
+
+@media(max-width: 992px) {
+    #soundDesign{
+        width: 736px;
+        height: 152px;
+    }
+}
 
 
-
-/*: MOBILE WORKS STYLES*/
+/*: MOBILE STYLES*/
+/*for medium devices  (sm)*/
 @media (max-width: 767px) {
     .img-responsive{
         max-width:80%;
         padding-bottom: 30px;
     }
+    #soundDesign{
+        width: 640px;
+        height: 132px;
+    }
+    #synthDesign{
+        width:640px;
+        height:360px;
+    }
 }
 
+@media (max-width: 670px) {
+    #soundDesign{
+        width:512px;
+        height:106px;
+    }
+    #synthDesign{
+        width:512px;
+        height:288px;
+    }
+}
+
+@media (max-width: 542px){
+    #soundDesign{
+        width: 464px;
+        height:96px;
+    }
+    #synthDesign{
+        width:464px;
+        height:261px;
+    }
+}
+
+/*for extra small device (xs)s*/
+@media (max-width: 480px) {
+    #soundDesign{
+        width: 448px;
+        height: 92px;
+    }
+    #synthDesign{
+        width:448px;
+        height:252px;
+    }
+}
+
+@media (max-width: 450px) {
+    #soundDesign{
+        width:320px;
+        height:66px;
+    }
+    #synthDesign{
+        width:320px;
+        height:180px;
+    }
+}
+
+/*for VERY extra small devices*/
 @media (max-width: 377px) {
+
     #intro h2{
         font-size: 1.2em;
     }
@@ -185,5 +262,13 @@ h1{
     #intro ul{
         font-size: 1.1em;
         font-weight: normal;
+    }
+    #soundDesign{
+        width: 304px;
+        height: 63px;
+    }
+    #synthDesign{
+        width:304px;
+        height:171px;
     }
 }
