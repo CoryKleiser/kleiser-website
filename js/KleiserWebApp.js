@@ -3,7 +3,8 @@
     var kleiserWebApp = angular.module(`kleiserWebApp`, [
         `ui.router`,
         `pageControllers`,
-        `pageServices`
+        `pageServices`,
+        `pageDirectives`
     ]);
 
     kleiserWebApp.config(function ($urlRouterProvider, $stateProvider) {

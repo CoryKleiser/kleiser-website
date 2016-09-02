@@ -4,10 +4,8 @@
     var pageDirectives = angular.module(`pageDirectives`, []);
 
     pageDirectives.directive(`draw`, function(){
-        return {
 // : Select canvas element
-            var draw = this;
-
+        var draw;
         var canvas = document.getElementById('canvas');
 
 // : Set up canvas for use
@@ -249,7 +247,7 @@
 
 
 //Do IT!
-        draw.drawAnimation = function () {
+        draw = function () {
             drawMainTriangle();
             fillTriangles();
             fillInvertedTriangles();
@@ -257,7 +255,8 @@
             switcher();
         }
 
-        };
+        return draw;
+
     })
 
 })();
