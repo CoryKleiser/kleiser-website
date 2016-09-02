@@ -4,9 +4,8 @@
     var pageControllers = angular.module(`pageControllers`, [`ui.router`]);
 
 
-    pageControllers.controller(`IntroController`, function ($rootScope, draw) {
+    pageControllers.controller(`IntroController`, function ($rootScope) {
         //TODO: intro controller logic
-        $rootScope.$on(`$stateChangeSuccess`, draw.drawAnimation());
     });
     pageControllers.controller(`WorkController`, function ($scope) {
         //TODO: work controller logic
