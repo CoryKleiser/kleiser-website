@@ -1,12 +1,12 @@
 'use strict';
 
-
+(function(){
     var pageDirectives = angular.module(`pageDirectives`, []);
 
     pageDirectives.directive(`drawing`, function(){
 
      return {
-          link: function(scope, element, attrs) {
+          link: function(scope, element) {
                // : Select canvas element
                var canvas = element[0];
 
@@ -251,11 +251,12 @@
 
                //Do IT!
 
-               drawMainTriangle();
-               fillTriangles();
-               fillInvertedTriangles();
-               document.getElementById('canvas').addEventListener('click', eyeAnimation);
-               switcher();
-         }
-    }
-});
+                drawMainTriangle();
+                fillTriangles();
+                fillInvertedTriangles();
+                document.getElementById('canvas').addEventListener('click', eyeAnimation);
+                switcher();
+            }
+        }
+    });
+})();
