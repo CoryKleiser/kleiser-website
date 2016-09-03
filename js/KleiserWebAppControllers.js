@@ -1,7 +1,7 @@
 'use strict';
 (function(){
 
-    var pageControllers = angular.module(`pageControllers`, [`ui.router`]);
+    var pageControllers = angular.module(`pageControllers`, []);
 
 
     pageControllers.controller(`IntroController`, function ($rootScope) {
