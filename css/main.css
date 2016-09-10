@@ -26,6 +26,15 @@ body{
 }
 
 
+/*TODO:FOOTER STYLES*/
+footer{
+    background-color:#222;
+    height: 75px;
+}
+footer a{
+    width: 75px;
+    padding-top: 17px;
+}
 
 /*: INTRO STYLES*/
 h1{
