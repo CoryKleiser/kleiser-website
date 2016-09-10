@@ -1,9 +1,14 @@
 /*main CSS document*/
 
+
 body{
     color:#000;
     background-color: #ececec;
     min-width: 320px;
+}
+
+#main{
+    padding-bottom: 75px;
 }
 
 .bgimage{
@@ -30,6 +35,11 @@ body{
 footer{
     background-color:#222;
     height: 75px;
+    width: 100%;
+}
+.fixFooter{
+    position: fixed;
+    bottom: 0;
 }
 footer a{
     width: 75px;
