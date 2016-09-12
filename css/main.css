@@ -53,6 +53,9 @@ h1{
     font-family:Georgia, serif;
     text-align:center;
 }
+h2{
+    text-align: center;
+}
 #intro h1{
     color:#3b5ba6;
 }

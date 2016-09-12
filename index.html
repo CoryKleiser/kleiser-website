@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="kleiserWebApp">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Web Design & Development - Multimedia Production | Cory Kleiser</title>
     <meta name="description" content="Cory Kleiser is a multimedia developer.
-        He produces for many platforms but focuses in web development.
-        This website was built to showcase his work.">
+        He produces for many platforms but focuses in web development.">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body ng-app="kleiserWebApp">
+<body>
 
 
 
@@ -58,7 +57,10 @@
 
 
     <!--VARIABLE CONTENT-->
-    <div id="main" ui-view>Cory Kleiser Web Development</div>
+    <div id="main" ui-view>
+        <h1>Cory Kleiser</h1>
+        <h2>Web Development</h2>
+    </div>
 
     <!--FOOTER CONTENT-->
     <footer class="container-fluid fixFooter">
@@ -81,8 +83,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <!--<script src="libs/angular.min.js" charset="utf-8"></script>-->
-    <!--<script src="libs/angular-ui-router.min.js" charset="utf-8"></script>-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
 
