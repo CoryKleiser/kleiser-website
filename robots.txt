@@ -1,0 +1,4 @@
+Sitemap: http://www.kleiser.io/sitemap.xml
+User-agent: *
+Disallow: /images/
+Disallow: /#/contact
