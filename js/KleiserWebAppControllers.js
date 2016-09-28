@@ -5,7 +5,30 @@
 
 
     pageControllers.controller(`IntroController`, function ($scope) {
-        //TODO: intro controller logic
+        //FIXME:  Loop thru greetings array to make initial greeting cycle through languages
+
+        $scope.greeting = `Hello`;
+
+        var greetings = [`Hello`, `Hola`, `Hallo`];
+
+        var placeHolder = 0;
+        var flag = true;
+
+        function changeGreeting() {
+            if (placeHolder == greetings.size){
+                placeHolder = 0;
+            }
+            else {
+                placeHolder++;
+            }
+
+            $scope.greeting = greetings[placeHolder];
+            setTimeout(changeGreeting, 2000);
+        }
+
+        changeGreeting()
+
+
     });
     pageControllers.controller(`WorkController`, function ($scope) {
         //TODO: work controller logic
