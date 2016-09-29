@@ -79,13 +79,26 @@ h2{
 
 
 #welcome{
-    background: -webkit-linear-gradient(#3b5ba6, #38a6a6, #38a638);
-    -webkit-background-clip: text;
+    /*background: -webkit-linear-gradient(#3b5ba6, #38a6a6, #38a638);*/
+    /*-webkit-background-clip: text;*/
     /*-webkit-text-fill-color: transparent;*/
     width:100%;
     margin-left: auto;
     margin-right: auto;
 }
+
+/*TODO: Move to animations CSS folder*/
+/* The starting CSS styles for the enter animation */
+.fade.ng-enter {
+    transition:0.1s linear all;
+    opacity:0;
+}
+
+/* The finishing CSS styles for the enter animation */
+.fade.ng-enter.ng-enter-active {
+    opacity:1;
+}
+
 
 
 /*CANVAS STYLES*/

@@ -5,28 +5,42 @@
 
 
     pageControllers.controller(`IntroController`, function ($scope) {
-        //FIXME:  Loop thru greetings array to make initial greeting cycle through languages
-
-        $scope.greeting = `Hello`;
-
-        var greetings = [`Hello`, `Hola`, `Hallo`];
+        //:  Loop thru greetings array to make initial greeting cycle through languages
+        var greetings = [`Hello`, `Hola`, `Nǐ hǎo`, `Hallo`, `Bonjour`];
 
         var placeHolder = 0;
-        var flag = true;
 
         function changeGreeting() {
-            if (placeHolder == greetings.size){
+
+            $scope.greeting = greetings[placeHolder];
+
+
+            if (placeHolder == greetings.length - 1){
                 placeHolder = 0;
             }
             else {
                 placeHolder++;
             }
 
-            $scope.greeting = greetings[placeHolder];
-            setTimeout(changeGreeting, 2000);
+            setTimeout(function () {
+                changeGreeting();
+                $scope.$apply();
+            }, 3000);
         }
 
-        changeGreeting()
+        // function changeGreeting() {
+        //     if (placeHolder == greetings.size){
+        //         placeHolder = 0;
+        //     }
+        //     else {
+        //         placeHolder++;
+        //     }
+        //
+        //     $scope.greeting = greetings[placeHolder];
+        //     setTimeout(function(){changeGreeting}, 2000);
+        // }
+
+        changeGreeting();
 
 
     });

@@ -2,6 +2,7 @@
 (function() {
     var kleiserWebApp = angular.module(`kleiserWebApp`, [
         `ui.router`,
+        `ngAnimate`,
         `pageControllers`,
         `pageServices`,
         `pageDirectives`
