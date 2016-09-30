@@ -25,13 +25,13 @@ body{
     border:none;
 }
 
-/*TODO:NAV STYLES*/
+/*:NAV STYLES*/
 .navbar{
     margin-bottom:0;
 }
 
 
-/*TODO:FOOTER STYLES*/
+/*:FOOTER STYLES*/
 footer{
     background-color:#222;
     height: 75px;
@@ -88,16 +88,6 @@ h2{
 }
 
 /*TODO: Move to animations CSS folder*/
-/* The starting CSS styles for the enter animation */
-.fade.ng-enter {
-    transition:0.1s linear all;
-    opacity:0;
-}
-
-/* The finishing CSS styles for the enter animation */
-.fade.ng-enter.ng-enter-active {
-    opacity:1;
-}
 
 
 
@@ -110,7 +100,7 @@ h2{
     text-align:center;
 }
 
-/*TODO: WORKS STYLES*/
+/*: WORKS STYLES*/
 #works {
     padding-bottom: 30px;
 }
@@ -153,7 +143,7 @@ h2{
     text-align: center;
 }
 
-/*TODO: ABOUT STYLES*/
+/*: ABOUT STYLES*/
 
 #about {
     background: url('../images/about-bg2.jpg') no-repeat center center;
@@ -191,7 +181,7 @@ h2{
 #status{
     color:#ececec;
 }
-/*TODO: CONTACT STYLES*/
+/*: CONTACT STYLES*/
 #contact{
     text-align:center;
 }
@@ -199,7 +189,7 @@ h2{
 
 
 
-/*TODO: MOBILE WORKS STYLES*/
+/*: MOBILE WORKS STYLES*/
 @media (max-width: 767px) {
     .img-responsive{
         max-width:80%;
