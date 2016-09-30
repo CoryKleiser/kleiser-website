@@ -28,18 +28,6 @@
             }, 3000);
         }
 
-        // function changeGreeting() {
-        //     if (placeHolder == greetings.size){
-        //         placeHolder = 0;
-        //     }
-        //     else {
-        //         placeHolder++;
-        //     }
-        //
-        //     $scope.greeting = greetings[placeHolder];
-        //     setTimeout(function(){changeGreeting}, 2000);
-        // }
-
         changeGreeting();
 
 
