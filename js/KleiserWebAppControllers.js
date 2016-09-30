@@ -45,10 +45,10 @@
 
     });
     pageControllers.controller(`WorkController`, function ($scope) {
-        //TODO: work controller logic
+        //: work controller logic
     });
     pageControllers.controller(`AboutController`, function ($scope) {
-        //TODO: about controller logic
+        //: about controller logic
     });
     pageControllers.controller(`ContactController`, function ($scope, messageFactory) {
         //: contact controller logic

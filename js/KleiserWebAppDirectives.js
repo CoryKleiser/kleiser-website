@@ -62,7 +62,7 @@
                 'pupilY': 176.4,
                };
 
-               //TODO: eye functions
+               //: eye functions
                function eyeOutline(radius) {
                 var rad = radius;
                 ctx.strokeStyle = 'black';
