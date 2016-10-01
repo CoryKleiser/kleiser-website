@@ -71,13 +71,27 @@
 
                 localStorage.post($scope.newContact, localData)
 
-                $scope.contacts.push(response.data);
+                    .catch(function () {
+                        console.log(`something went wrong!`);
+                        return;
+                    });
+
+                var newItem = {
+                    doc: $scope.newContact
+                };
+
+                console.log($scope.newContact);
+                console.log(newItem);
+                console.log(newItem.doc);
+                $scope.contacts.push(newItem);
+
+                console.log($scope.newContact),
                 $scope.newContact = {
                     name: ``,
                     email: ``,
                     phone: ``,
                     createdOn: new Date()
-                }
+                };
             }
         }
     });

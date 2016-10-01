@@ -31,28 +31,27 @@
             load: function (localData, callback) {
                 //TODO:: take logs out after testing
                 //load local data
-                new Promise(function (resolve, reject) {
 
-                    return localData.allDocs({
-                        include_docs: true,
-                        attachments: true
-                    }).then(function (result) {
-                        console.log(result);
-                        callback(result);
-                    }).catch(function (err) {
-                        console.log(`error loading saved contacts`);
-                        console.log(err);
-                    });
+                return localData.allDocs({
+                    include_docs: true,
+                    attachments: true
+                }).then(function (result) {
+                    console.log(result);
+                    callback(result);
+                }).catch(function (err) {
+                    console.log(`error loading saved contacts`);
+                    console.log(err);
                 });
             },
             post: function (newContact, localData){
                 // post to local storage
-                localData.put(newContact).then(function (result) {
-                    console.log(`Successfully Posted to Offline Storage`);
-                }).catch(function (err) {
-                    console.log(`ERROR:: Did not Post to Offline Storage`);
-                    console.log(err);
-                });
+                return  localData.put(newContact)
+                        .then(function (result) {console.log(`Successfully Posted to Offline Storage`);})
+                        .catch(function (err) {
+                            console.log(`ERROR:: Did not Post to Offline Storage`);
+                            console.log(err);
+                        });
+
             },
             delete: function (localData) {
                 // :  pouch delete logic

@@ -259,7 +259,7 @@
             }
         }
     });
-    
+
     pageDirectives.directive(`deleteContactEvent`, function () {
         return{
             restrict: 'C',
