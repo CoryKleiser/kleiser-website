@@ -259,4 +259,15 @@
             }
         }
     });
+    
+    pageDirectives.directive(`deleteContactEvent`, function () {
+        return{
+            restrict: 'C',
+            link: function(scope, element, attrs) {
+                element.bind('click', function ($event) {
+                    element.parent().remove();
+                });
+            }
+        }
+    });
 })();
