@@ -236,7 +236,7 @@
                };
 
 
-               //TODO: make eye move around triab
+               //: make eye move around triab
                var eyeAnimation = function () {
                 // renderEye();
                 fillTriangleFunction();

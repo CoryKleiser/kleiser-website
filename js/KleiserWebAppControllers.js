@@ -37,7 +37,7 @@
         $scope.contactList = false;
     });
 
-    //TODO:: add work.contactlist controller
+    //work.contactlist controller
     pageControllers.controller(`ContactListController`, function ($rootScope, $scope, localStorage) {
         $rootScope.localData = new PouchDB(`contactList`);
         $scope.newContact = {
@@ -60,6 +60,7 @@
 
 
         $scope.submit = function () {
+            //TODO:: validation
             if (!$scope.newContact.name || !$scope.newContact.email || !$scope.newContact.phone) {
                 alert(`Please Fill Each Field`);
             }

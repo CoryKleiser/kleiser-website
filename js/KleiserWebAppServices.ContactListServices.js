@@ -14,10 +14,9 @@
                     include_docs: true,
                     attachments: true
                 }).then(function (result) {
-                    console.log(result);
                     callback(result);
                 }).catch(function (err) {
-                    console.log(`error loading saved contacts`);
+                    console.log(`ERROR:: unable to load saved contacts`);
                     console.log(err);
                 });
             },
@@ -40,7 +39,7 @@
                     return $rootScope.localData.remove(doc._id, doc._rev);
                 }).catch(function (er) {
                     console.log(er);
-                    alert(`Error! Unable to delete contact!`);
+                    alert(`ERROR:: Unable to delete contact!`);
                 })
             }
         }
