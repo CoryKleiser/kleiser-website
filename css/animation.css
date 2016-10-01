@@ -1,17 +1,27 @@
-/* The starting CSS styles for the enter animation */
-.fade.ng-enter {
-    transition:0.1s linear all;
-    opacity:0;
-}
-
-/* The finishing CSS styles for the enter animation */
-.fade.ng-enter.ng-enter-active {
-    opacity:1;
+.content-area {
+    margin-top: 10px;
+    padding: 10px;
 }
 
 .sample-show-hide {
-    transition: all linear 0.5s;
+    transition: all linear 2s;
+    height:400px;
 }
 .sample-show-hide.ng-hide {
     opacity: 0;
+}
+
+
+.css-class-add, .css-class-remove {
+    transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+.css-class,
+.css-class-add.css-class-add-active {
+    color: red;
+    font-size:3em;
+}
+
+.css-class-remove.css-class-remove-active {
+    font-size:1.0em;
+    color: black;
 }

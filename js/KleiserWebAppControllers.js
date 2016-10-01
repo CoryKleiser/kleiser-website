@@ -34,6 +34,7 @@
     });
     pageControllers.controller(`WorkController`, function ($scope) {
         //: work controller logic
+        $scope.contactList = false;
     });
     pageControllers.controller(`AboutController`, function ($scope) {
         //: about controller logic
