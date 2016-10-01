@@ -48,38 +48,38 @@
             _id: ``
         };
 
-        $scope.updateContacts = function(){
+        $scope.updateContacts = function () {
             localStorage.load(localData, function (data) {
-                $scope.contacts = data;
+                console.log(data);
+                $scope.contacts = data.rows;
+                console.log(data.rows);
+                console.log(data.rows[0].doc);
             });
         }
         $scope.updateContacts()
 
 
         $scope.submit = function () {
-            if (!$scope.newContact.name || !$scope.newContact.email || !$scope.newContact.phone){
+            if (!$scope.newContact.name || !$scope.newContact.email || !$scope.newContact.phone) {
                 alert(`Please Fill Each Field`);
             }
             else {
                 $scope.newContact.createdOn = new Date();
+                $scope.newContact._id = $scope.newContact.name;
+
+                console.log($scope.newContact);
 
                 localStorage.post($scope.newContact, localData)
-                    .then(function (response) {
-                        console.log(response);
 
-                        $scope.contacts.push(response.data);
-                        $scope.newContact = {
-                            name: ``,
-                            email: ``,
-                            phone: ``,
-                            createdOn: new Date()
-                        };
-                    })
-                    .catch(function(response) {
-                        console.log(response);
-                    });
+                $scope.contacts.push(response.data);
+                $scope.newContact = {
+                    name: ``,
+                    email: ``,
+                    phone: ``,
+                    createdOn: new Date()
+                }
             }
-        };
+        }
     });
 
     pageControllers.controller(`AboutController`, function ($scope) {

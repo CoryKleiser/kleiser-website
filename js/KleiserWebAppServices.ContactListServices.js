@@ -31,15 +31,18 @@
             load: function (localData, callback) {
                 //TODO:: take logs out after testing
                 //load local data
-                return localData.allDocs({
-                    include_docs: true,
-                    attachments: true
-                }).then(function (result) {
-                    console.log(result);
-                    callback(result);
-                }).catch(function (err) {
-                    console.log(`error loading saved contacts`);
-                    console.log(err);
+                new Promise(function (resolve, reject) {
+
+                    return localData.allDocs({
+                        include_docs: true,
+                        attachments: true
+                    }).then(function (result) {
+                        console.log(result);
+                        callback(result);
+                    }).catch(function (err) {
+                        console.log(`error loading saved contacts`);
+                        console.log(err);
+                    });
                 });
             },
             post: function (newContact, localData){

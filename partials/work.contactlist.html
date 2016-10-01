@@ -35,11 +35,11 @@
         <div class="col-md-8">
             <ul id="contactList" class="list-unstyled h4" ng-repeat="item in contacts"> <!--ng-bind-html="newContactItem | unsafe"-->
                 <li>
-                    <h4>{{item.name}}</h4>
-                    <h5>Email: {{item.email}}</h5>
-                    <h5>Phone Number: {{item.phone}}</h5>
-                    <h5>Added {{item.createdOn | date:"MMM dd, yyyy"}}</h5>
-                    <button id="{{item.name}}" class="btn btn-default btn-xs btn-danger delete">Delete</button>
+                    <h4>{{item.doc.name}}</h4>
+                    <h5>Email: {{item.doc.email}}</h5>
+                    <h5>Phone Number: {{item.doc.phone}}</h5>
+                    <h5>Added {{item.doc.createdOn | date:"MMM dd, yyyy"}}</h5>
+                    <button id="{{item.doc.name}}" class="btn btn-default btn-xs btn-danger delete">Delete</button>
                 </li>
             </ul>
         </div>
