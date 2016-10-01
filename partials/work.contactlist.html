@@ -27,6 +27,8 @@
                            placeholder="Enter Phone Here" ng-model="newContact.phone"
                            value="{{inputPhone}}" />
                 </div>
+                <input type="text" id="inputId" class="hidden"
+                       ng-model="newContact._id" value="{{inputName}}">
                 <input type="submit" value="Save" class="btn btn-success" />
             </form>
         </div>
@@ -37,6 +39,7 @@
                     <h5>Email: {{item.email}}</h5>
                     <h5>Phone Number: {{item.phone}}</h5>
                     <h5>Added {{item.createdOn | date:"MMM dd, yyyy"}}</h5>
+                    <button id="{{item.name}}" class="btn btn-default btn-xs btn-danger delete">Delete</button>
                 </li>
             </ul>
         </div>

@@ -6,6 +6,12 @@
 
     contactListServices.factory(`contact`, function () {
         return{
+            /**
+             * Creates new Contact Element
+             *
+             * @param contact
+             * @returns {*|jQuery|HTMLElement}
+             */
             createContact: function (contact) {
             // : Create li element and return
             const count = $(`li`).length;
@@ -22,57 +28,30 @@
 
     contactListServices.factory(`localStorage`, function (contact) {
         return{
-            load: function () {
+            load: function (localData, callback) {
                 //TODO:: take logs out after testing
-                localData.allDocs({
+                //load local data
+                return localData.allDocs({
                     include_docs: true,
                     attachments: true
                 }).then(function (result) {
                     console.log(result);
-                    console.log(result.rows.length);
-
-                    //load local data
-                    $(result.rows).each(function () {
-                        // : Create contacts for each record
-                        const savedContact = contact.createContact(this.doc);
-                        // : Append contacts (li elements) to ul#contactList
-                        $(`#contactList`).append(savedContact);
-                    });
-
-                    //style buttons
-                    $(`button`).addClass(`btn btn-default btn-xs btn-danger delete`);
-                    //attach delete handler
-                    $(`.delete`).on(`click`, handleContactDelete);
+                    callback(result);
                 }).catch(function (err) {
                     console.log(`error loading saved contacts`);
                     console.log(err);
                 });
             },
-            post: function (newContact){
-                var phoneValidate = /^\+?[0-9]*(\([0-9]*\))?[0-9-]*[0-9]$/;
-                var emailValidate = /^(\S+@)([a-z0-9_\-]+)\.([a-z]{2,5})$/i;
-
-                //validate
-                if (!newContact.name) {
-                    alert(`Please enter your name.`);
-                }
-                else if (!emailValidate.test(newContact.email)) {
-                    alert(`Please enter valid email address.`);
-                }
-                else if (!phoneValidate.test(newContact.phone)) {
-                    alert(`Please enter a valid phone number`);
-                }
-                else {
-                    // post to local storage
-                    localData.put(newContact).then(function (result) {
-                        console.log(`Successfully Posted to Offline Storage`);
-                    }).catch(function (err) {
-                        console.log(`ERROR:: Did not Post to Offline Storage`);
-                        console.log(err);
-                    });
-                }
+            post: function (newContact, localData){
+                // post to local storage
+                localData.put(newContact).then(function (result) {
+                    console.log(`Successfully Posted to Offline Storage`);
+                }).catch(function (err) {
+                    console.log(`ERROR:: Did not Post to Offline Storage`);
+                    console.log(err);
+                });
             },
-            delete: function () {
+            delete: function (localData) {
                 // :  pouch delete logic
                 //todo: take logs out after testing
                 console.log(`to be deleted: ${contactToDelete}`);
@@ -86,6 +65,9 @@
             }
         }
     });
+
+
+
 
 
 })();

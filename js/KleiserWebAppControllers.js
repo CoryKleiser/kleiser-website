@@ -3,7 +3,6 @@
 
     var pageControllers = angular.module(`pageControllers`, []);
 
-
     pageControllers.controller(`IntroController`, function ($scope) {
         //:  Loop thru greetings array to make initial greeting cycle through languages
         var greetings = [`Hello`, `Hola`, `Nǐ hǎo`, `Hallo`, `Bonjour`];
@@ -39,33 +38,49 @@
     });
 
     //TODO:: add work.contactlist controller
-    pageControllers.controller(`WorkController.ContactList`, function ($scope, contactListServices) {
-        //get values
+    pageControllers.controller(`ContactListController`, function ($scope, contact, localStorage) {
+        var localData = new PouchDB(`contactList`);
         $scope.newContact = {
             name: ``,
             email: ``,
             phone: ``,
+            createdOn: new Date(),
+            _id: ``
         };
 
         $scope.updateContacts = function(){
-            contactListServices.localStorage.load(function (data) {
+            localStorage.load(localData, function (data) {
                 $scope.contacts = data;
             });
         }
-        $scope.updateContacts();
+        $scope.updateContacts()
 
 
-        $scope.submit = function (newContact) {
-            newContact.createdOn = new Date();
-            contactListServices.localStorage.post(newContact);
-            contactListServices.contact.createContact(newContact);
-            $scope.newContact = {
-                name: ``,
-                email: ``,
-                phone: ``,
+        $scope.submit = function () {
+            if (!$scope.newContact.name || !$scope.newContact.email || !$scope.newContact.phone){
+                alert(`Please Fill Each Field`);
+            }
+            else {
+                $scope.newContact.createdOn = new Date();
+
+                localStorage.post($scope.newContact, localData)
+                    .then(function (response) {
+                        console.log(response);
+
+                        $scope.contacts.push(response.data);
+                        $scope.newContact = {
+                            name: ``,
+                            email: ``,
+                            phone: ``,
+                            createdOn: new Date()
+                        };
+                    })
+                    .catch(function(response) {
+                        console.log(response);
+                    });
             }
         };
-    })
+    });
 
     pageControllers.controller(`AboutController`, function ($scope) {
         //: about controller logic

@@ -23,7 +23,8 @@
             controller: `WorkController`
             })
             .state(`work.contactlist`, {
-                templateUrl: `partials/work.contactlist.html`
+                templateUrl: `partials/work.contactlist.html`,
+                controller: `ContactListController`
             })
             .state(`about`, {
             url: `/about`,
