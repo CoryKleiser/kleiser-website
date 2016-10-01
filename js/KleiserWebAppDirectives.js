@@ -260,12 +260,19 @@
         }
     });
 
-    pageDirectives.directive(`deleteContactEvent`, function () {
+    pageDirectives.directive(`deleteContactEvent`, function (localStorage) {
         return{
             restrict: 'C',
             link: function(scope, element, attrs) {
                 element.bind('click', function ($event) {
+
+                    console.log($event.target.id);
+                    var contactId = $event.target.id;
+                    console.log(contactId);
+                    localStorage.delete(contactId);
+
                     element.parent().remove();
+
                 });
             }
         }

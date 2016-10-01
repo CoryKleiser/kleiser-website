@@ -38,8 +38,8 @@
     });
 
     //TODO:: add work.contactlist controller
-    pageControllers.controller(`ContactListController`, function ($scope, contact, localStorage) {
-        var localData = new PouchDB(`contactList`);
+    pageControllers.controller(`ContactListController`, function ($rootScope, $scope, localStorage) {
+        $rootScope.localData = new PouchDB(`contactList`);
         $scope.newContact = {
             name: ``,
             email: ``,
@@ -49,7 +49,7 @@
         };
 
         $scope.updateContacts = function () {
-            localStorage.load(localData, function (data) {
+            localStorage.load(function (data) {
                 console.log(data);
                 $scope.contacts = data.rows;
                 console.log(data.rows);
@@ -69,7 +69,7 @@
 
                 console.log($scope.newContact);
 
-                localStorage.post($scope.newContact, localData)
+                localStorage.post($scope.newContact)
 
                     .catch(function () {
                         console.log(`something went wrong!`);
@@ -80,12 +80,12 @@
                     doc: $scope.newContact
                 };
 
-                console.log($scope.newContact);
-                console.log(newItem);
-                console.log(newItem.doc);
+
+                //update DOM
                 $scope.contacts.push(newItem);
 
-                console.log($scope.newContact),
+                console.log($scope.newContact);
+                //clear Form
                 $scope.newContact = {
                     name: ``,
                     email: ``,
