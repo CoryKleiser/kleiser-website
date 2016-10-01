@@ -5,7 +5,8 @@
         `ngAnimate`,
         `pageControllers`,
         `pageServices`,
-        `pageDirectives`
+        `contactListServices`,
+        `pageDirectives`,
     ]);
 
     kleiserWebApp.config(function ($urlRouterProvider, $stateProvider) {
