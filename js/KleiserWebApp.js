@@ -5,6 +5,7 @@
         `ngAnimate`,
         `pageControllers`,
         `pageServices`,
+        `tadooServices`,
         `contactListServices`,
         `pageDirectives`,
     ]);
