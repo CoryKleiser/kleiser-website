@@ -17,16 +17,34 @@
             templateUrl: `partials/intro.html`,
             controller: `IntroController`,
             })
-            .state(`work`, {
-            url: `/work`,
-            templateUrl: `partials/work.html`,
-            controller: `WorkController`
+            // .state(`work`, {
+            // url: `/work`,
+            // templateUrl: `partials/work.html`,
+            // controller: `WorkController`
+            // })
+            // .state(`work.contactlist`, {
+            //     templateUrl: `partials/work.contactlist.html`,
+            //     controller: `ContactListController`
+            // })
+            .state('work', {
+                url: '/work',
+                templateUrl: 'partials/work.html',
+                views: {
+                    'feature1@work': {
+                        templateUrl: `partials/work.tadoo.html`,
+                        controller: `TadooController`
+                    },
+                    // 'feature2@work' : {
+                    //     templateUrl: 'tpls/views/sidebar.html',
+                    //     controller: 'MyCtrl',
+                    // },
+                    'feature3@work': {
+                        templateUrl: `partials/work.contactlist.html`,
+                        controller: `ContactListController`
+                    }
+                }
             })
-            .state(`work.contactlist`, {
-                templateUrl: `partials/work.contactlist.html`,
-                controller: `ContactListController`
-            })
-            .state(`about`, {
+        .state(`about`, {
             url: `/about`,
             templateUrl: `partials/about.html`,
             controller: `AboutController`
