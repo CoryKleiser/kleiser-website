@@ -10,7 +10,7 @@
 
                 <div class="btn-group-vertical features" id="feature1">
                     <!--app dropdown button-->
-                    <button class="btn btn-default btn-block" ng-click="tadoo = !tadoo" ui-sref=".tadoo">
+                    <button class="btn btn-default btn-block" ng-click="feature1 = !feature1">
                         <h2>Tadoo!</h2>
                     </button>
 
@@ -21,13 +21,13 @@
                     </a>
                 </div>
                 <!--TODO:: implement Tadoo! app (fix reviews first) app drop down-->
-                <!--<div class="content-area feature-show-hide" ng-show="tadoo" ui-view></div>-->
+                <div class="content-area feature-show-hide" ng-show="feature1" ui-view="feature1"></div>
             </section>
 
             <section class="col-sm-4">
                 <div class="btn-group-vertical features" id="feature2">
                     <!--app dropdown button-->
-                    <button class="btn btn-default btn-block"ng-click="greatPicks = !greatPicks" ui-sref=".greatpicks">
+                    <button class="btn btn-default btn-block"ng-click="feature2 = !feature2">
                         <h2>Great Picks</h2>
                     </button>
 
@@ -38,13 +38,13 @@
                     </a>
                 </div>
                 <!--TODO:: implement great picks! app (run here in console or apply to GUI) app drop down-->
-                <!--<div class="content-area feature-show-hide" ng-show="greatPicks" ui-view></div>-->
+                <!--<div class="content-area feature-show-hide" ng-show="feature2" ui-view="feature2"></div>-->
             </section>
 
             <section class="col-sm-4">
                 <div class="btn-group-vertical features" id="feature3">
                     <!--app dropdown-->
-                    <button class="btn btn-default btn-block"ng-click="contactList = !contactList" ui-sref=".contactlist">
+                    <button class="btn btn-default btn-block"ng-click="feature3 = !feature3">
                         <h2>Contact List</h2>
                     </button>
 
@@ -54,7 +54,7 @@
                         View Github
                     </a>
                 </div>
-                <div class="content-area feature-show-hide" ng-show="contactList" ui-view></div>
+                <div class="content-area feature-show-hide" ng-show="feature3" ui-view="feature3"></div>
 
             </section>
         </section>

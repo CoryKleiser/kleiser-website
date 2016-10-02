@@ -28,8 +28,11 @@
             // })
             .state('work', {
                 url: '/work',
-                templateUrl: 'partials/work.html',
+                controller: 'WorkController',
                 views: {
+                    '': {
+                        templateUrl: 'partials/work.html',
+                    },
                     'feature1@work': {
                         templateUrl: `partials/work.tadoo.html`,
                         controller: `TadooController`
