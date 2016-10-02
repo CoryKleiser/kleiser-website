@@ -36,12 +36,9 @@
                         templateUrl: 'partials/work.html',
                     },
                     'feature1@work': {
-
+                        templateUrl: `partials/work.tadoo.html`,
                         controller: `CatController`,
                         views: {
-                            '': {
-                                templateUrl: `partials/work.tadoo.html`
-                            },
                             'list@feature1@work': {
                                 templateUrl: `partials/work.tadoo.list.html`,
                                 controller: `ListController`
