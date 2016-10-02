@@ -1,10 +1,10 @@
-<div class="container">
+<div class="featureContainer" id="contactFeature">
     <div class="row">
-        <div class="span12 h1">Contacts</div>
-        <div class="col-md-4">
+        <div class="span12 h1 text-center">Contacts</div>
+        <div class="col-xs-12">
             <form id="contactForm" name="contactForm" novalidate ng-submit="submit()">
                 <div class="form-group">
-                    <label for="inputName">
+                    <label class="sr-only" for="inputName">
                         Name:
                     </label>
                     <input type="text" id="inputName" class="form-control"
@@ -12,7 +12,7 @@
                            value="{{inputName}}" />
                 </div>
                 <div class="form-group">
-                    <label for="inputEmail">
+                    <label class="sr-only" for="inputEmail">
                         Email:
                     </label>
                     <input type="email" id="inputEmail" class="form-control"
@@ -20,26 +20,25 @@
                            value="{{inputEmail}}" />
                 </div>
                 <div class="form-group">
-                    <label for="inputPhone">
+                    <label class="sr-only" for="inputPhone">
                         Phone:
                     </label>
                     <input type="tel" id="inputPhone" class="form-control"
                            placeholder="Enter Phone Here" ng-model="newContact.phone"
                            value="{{inputPhone}}" />
                 </div>
-                <input type="text" id="inputId" class="hidden"
-                       ng-model="newContact._id" value="{{inputName}}">
-                <input type="submit" value="Save" class="btn btn-success" />
+
+                <input type="submit" value="Save" class="btn btn-success pull-right" />
             </form>
         </div>
-        <div class="col-md-8">
+        <div class="col-xs-12">
             <ul id="contactList" class="list-unstyled h4" ng-repeat="item in contacts"> <!--ng-bind-html="newContactItem | unsafe"-->
                 <li>
                     <h4>{{item.doc.name}}</h4>
                     <h5>Email: {{item.doc.email}}</h5>
                     <h5>Phone Number: {{item.doc.phone}}</h5>
                     <h5>Added {{item.doc.createdOn | date:"MMM dd, yyyy"}}</h5>
-                    <button id="{{item.doc.name}}" class="btn btn-default btn-xs btn-danger delete deleteContactEvent">Delete</button>
+                    <button id="{{item.doc.name}}" class="btn btn-xs btn-danger delete deleteContactEvent">Delete</button>
                 </li>
             </ul>
         </div>

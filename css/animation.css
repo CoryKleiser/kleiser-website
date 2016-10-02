@@ -1,27 +1,21 @@
 .content-area {
     margin-top: 10px;
     padding: 10px;
+    border: 2px solid #666666;
+    background-color: #bababa;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
 }
 
-.sample-show-hide {
-    transition: all linear 2s;
-    height:400px;
+.ng-leave {
+    display: none;
 }
-.sample-show-hide.ng-hide {
+
+.feature-show-hide {
+    transition: all linear 1s;
+    height:auto;
+}
+.feature-show-hide.ng-hide {
     opacity: 0;
-}
-
-
-.css-class-add, .css-class-remove {
-    transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-}
-.css-class,
-.css-class-add.css-class-add-active {
-    color: red;
-    font-size:3em;
-}
-
-.css-class-remove.css-class-remove-active {
-    font-size:1.0em;
-    color: black;
 }
