@@ -34,10 +34,9 @@
 
     pageControllers.controller(`WorkController`, function ($scope) {
         //: work controller logic
-        $scope.contactList = false;
     });
 
-    //work.contactlist controller
+    //feature3 controller
     pageControllers.controller(`ContactListController`, function ($rootScope, $scope, localStorage) {
         $rootScope.localData = new PouchDB(`contactList`);
         $scope.newContact = {
