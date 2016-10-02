@@ -19,15 +19,6 @@
             templateUrl: `partials/intro.html`,
             controller: `IntroController`,
             })
-            // .state(`work`, {
-            // url: `/work`,
-            // templateUrl: `partials/work.html`,
-            // controller: `WorkController`
-            // })
-            // .state(`work.contactlist`, {
-            //     templateUrl: `partials/work.contactlist.html`,
-            //     controller: `ContactListController`
-            // })
             .state('work', {
                 url: '/work',
                 controller: 'WorkController',
@@ -38,12 +29,16 @@
                     'feature1@work': {
                         templateUrl: `partials/work.tadoo.html`,
                         controller: `CatController`,
-                        views: {
-                            'list@feature1@work': {
-                                templateUrl: `partials/work.tadoo.list.html`,
-                                controller: `ListController`
-                            }
-                        }
+                        // views: {
+                        //     'list@work': {
+                        //         templateUrl: `partials/work.tadoo.list.html`,
+                        //         controller: `ListController`
+                        //     }
+                        // }
+                    },
+                    'list@work': {
+                        templateUrl: `partials/work.tadoo.list.html`,
+                        controller: `ListController`
                     },
                     // 'feature2@work' : {
                     //     templateUrl: 'tpls/views/sidebar.html',

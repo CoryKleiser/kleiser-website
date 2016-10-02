@@ -9,32 +9,19 @@
 
             //Set Up Google Map and Location
             //Calls findUser fn from the locate Service
-            $scope.goList = function(hash){
-                if (locate.userLocation != undefined){
-
-                    $location.path(hash);
-
-                }
-                else{
-                    alert(`Please wait while we locate you.`);
-                }
-
-            }
-            locate
-                .findUser()
-                .then($scope.userLocation = locate.findUser);
+            $scope.userLocation = locate.findUser;
 
 
         });
 
         //List Controller
-        TadooControllers.controller(`ListController`, function ($scope, $routeParams, $location, locate, places) {
+        TadooControllers.controller(`ListController`, function ($scope, $stateParams, $location, locate, places) {
 
             //instantiate locations var
             $scope.locations = [];
 
             //finds itemId
-            let itemId = $routeParams.itemId;
+            let itemId = $stateParams.item;
             if (itemId == 0){
                 $scope.category = [`restaurant`];
                 $scope.catHeader = `TaEat`;
