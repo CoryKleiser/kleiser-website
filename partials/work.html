@@ -7,45 +7,54 @@
             <legend>Programming</legend>
 
             <section class="col-sm-4">
+
                 <div class="btn-group-vertical features" id="feature1">
-                    <a class="btn btn-default" role="button"
+                    <!--app dropdown button-->
+                    <button class="btn btn-default btn-block" ng-click="tadoo = !tadoo" ui-sref=".tadoo">
+                        <h2>Tadoo!</h2>
+                    </button>
+
+                    <a class="btn btn-info" role="button"
                        href="https://github.com/CoryKleiser/tadoo" target="_blank"
                        title="Click to view code on github!">
-                        <h2>Tadoo!</h2>
+                        Tadoo! on github
                     </a>
-                    <!--appdropdown-->
-                    <input type="button" class="btn btn-info btn-block disabled" value="NOT DONE!" ng-click="tadoo = !tadoo" ui-sref=".tadoo">
                 </div>
-                <div class="content-area feature-show-hide" ng-show="tadoo" ui-view></div>
+                <!--TODO:: implement Tadoo! app (fix reviews first) app drop down-->
+                <!--<div class="content-area feature-show-hide" ng-show="tadoo" ui-view></div>-->
             </section>
 
             <section class="col-sm-4">
                 <div class="btn-group-vertical features" id="feature2">
-                    <a class="btn btn-default" role="button"
+                    <!--app dropdown button-->
+                    <button class="btn btn-default btn-block"ng-click="greatPicks = !greatPicks" ui-sref=".greatpicks">
+                        <h2>Great Picks</h2>
+                    </button>
+
+                    <a class="btn btn-info" role="button"
                        href="https://github.com/CoryKleiser/great-picks" target="_blank"
                        title="Click to view code on github!">
-                        <h2>Great Picks</h2>
+                        Great Picks on Github
                     </a>
-                    <!--app dropdown-->
-                    <input type="button" class="btn btn-info btn-block disabled" value="NOT DONE!" ng-click="greatPicks = !greatPicks" ui-sref=".greatpicks">
                 </div>
-                <div class="content-area feature-show-hide" ng-show="greatPicks" ui-view></div>
+                <!--TODO:: implement great picks! app (run here in console or apply to GUI) app drop down-->
+                <!--<div class="content-area feature-show-hide" ng-show="greatPicks" ui-view></div>-->
             </section>
 
             <section class="col-sm-4">
                 <div class="btn-group-vertical features" id="feature3">
-                    <a class="btn btn-default" role="button"
+                    <!--app dropdown-->
+                    <button class="btn btn-default btn-block"ng-click="contactList = !contactList" ui-sref=".contactlist">
+                        <h2>Contact List</h2>
+                    </button>
+
+                    <a class="btn btn-info" role="button"
                        href="https://github.com/CoryKleiser/offline-ready-contact-list"
                        target="_blank" title="Click to view code on github!">
-                        <h2>Contact List</h2>
+                        View Github
                     </a>
-
-                    <!--app dropdown-->
-                    <input type="button" class="btn btn-info btn-block" value="View App!" ng-click="contactList = !contactList" ui-sref=".contactlist">
                 </div>
-
                 <div class="content-area feature-show-hide" ng-show="contactList" ui-view></div>
-
 
             </section>
         </section>
