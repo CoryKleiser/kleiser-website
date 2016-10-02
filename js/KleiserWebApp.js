@@ -4,6 +4,7 @@
         `ui.router`,
         `ngAnimate`,
         `pageControllers`,
+        `TadooControllers`,
         `pageServices`,
         `tadooServices`,
         `contactListServices`,
@@ -35,8 +36,17 @@
                         templateUrl: 'partials/work.html',
                     },
                     'feature1@work': {
-                        templateUrl: `partials/work.tadoo.html`,
-                        controller: `TadooController`
+
+                        controller: `CatController`,
+                        views: {
+                            '': {
+                                templateUrl: `partials/work.tadoo.html`
+                            },
+                            'list@feature1@work': {
+                                templateUrl: `partials/work.tadoo.list.html`,
+                                controller: `ListController`
+                            }
+                        }
                     },
                     // 'feature2@work' : {
                     //     templateUrl: 'tpls/views/sidebar.html',
