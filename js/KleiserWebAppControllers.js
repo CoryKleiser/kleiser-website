@@ -49,10 +49,7 @@
 
         $scope.updateContacts = function () {
             localStorage.load(function (data) {
-                console.log(data);
                 $scope.contacts = data.rows;
-                console.log(data.rows);
-                console.log(data.rows[0].doc);
             });
         }
         $scope.updateContacts()
