@@ -1,0 +1,77 @@
+header b{
+    position: relative;
+    color: #618eb3;
+    left: -1em;
+}
+
+
+#bgimage{
+    /*background-image: url('../images');*/
+    background-position:center center;
+    background-size: cover;
+    height:150px;
+}
+
+
+.info-content{
+    color:#3b629d;
+}
+a{
+    text-decoration:none;
+    color:#dee9fa;
+}
+a:link{
+    text-decoration: none;
+}
+a:visited{
+    color: #dee9fa;
+}
+a:hover{
+}
+span{
+    font-size:1em;
+}
+/*span:focus{color: #b5cadc;}*/
+/*span:hover{color: #b5cadc;  }*/
+#rating{
+    font-size:.6em;
+}
+
+.btn-primary{
+    background-color: #ff8738;
+    border: none;
+}
+.btn-primary:link{
+    background-color: #ffa56a;
+}
+.btn-primary:hover{
+    background-color: #ffa56a;
+}
+.btn-primary:active{
+    background-color: #ffa56a;
+}
+.btn-primary:active:hover{
+    background-color: #ffa56a;
+}
+.btn-primary.disabled:hover{
+    background-color: #ffa56a;
+}
+
+
+.btn-success{
+    background-color: #24a38a;
+    border: none;
+}
+.btn-success:link{
+    background-color: #57d1b9;
+}
+.btn-success:hover{
+    background-color: #57d1b9;
+}
+.btn-success:active{
+    background-color: #57d1b9;
+}
+.btn-success:active:hover{
+    background-color: #57d1b9;
+}
+
