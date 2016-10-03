@@ -40,10 +40,10 @@
                         templateUrl: `partials/work.tadoo.list.html`,
                         controller: `ListController`,
                     },
-                    // 'feature2@work' : {
-                    //     templateUrl: 'partials/work.greatpicks.html',
-                    //     controller: 'GreatPicksController',
-                    // },
+                    'feature2@work' : {
+                        templateUrl: 'partials/work.greatpicks.html',
+                        // controller: 'GreatPicksController',
+                    },
                     'feature3@work': {
                         templateUrl: `partials/work.contactlist.html`,
                         controller: `ContactListController`
