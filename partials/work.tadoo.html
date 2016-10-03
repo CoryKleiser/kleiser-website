@@ -1,4 +1,9 @@
 <link rel="stylesheet" href="css/tadoo.css">
+<div class="container-fluid">
+    <h3 class="col-xs-offset-2">Tadoo!</h3>
+    <p class="col-xs-8 col-xs-offset-2 lead">This is app will locate you using Google's Javascript GeoLocation API.
+        Then it will search places in the area from the selected category.</p>
+</div>
 <section id="categories">
     <div class="container-fluid">
         <div class="row">
@@ -16,23 +21,7 @@
 
                 </div>
             </header>
-            <div class="col-xs-12 text-center">
-                <ul class="list-inline">
-                    <div>
-                        <li><span class="h2 btn btn-primary btn-lg btn-block" ui-sref="list">Food</span></li>
-
-                        <li><span class="h2 btn btn-primary btn-lg btn-block" ng-click="goList('/list/1')">Adventure</span></li>
-
-                        <li><span class="h2 btn btn-primary btn-lg btn-block" ng-click="goList('/list/2')">Shopping</span></li>
-
-                        <li><span class="h2 btn btn-primary btn-lg btn-block" ng-click="goList('/list/3')">On The Road</span></li>
-
-                        <li><span class="h2 btn btn-primary btn-lg btn-block" ng-click="goList('/list/4')">Chill Spots</span></li>
-
-                        <li><span class="h2 btn btn-primary btn-lg btn-block disabled"> <!--ng-click="goList('/list/5')"-->Kids</span></li>
-                    </div>
-                </ul>
-            </div>
         </div>
+        <div ui-view="cat"></div>
     </div>
 </section>

@@ -28,13 +28,11 @@
                     },
                     'feature1@work': {
                         templateUrl: `partials/work.tadoo.html`,
+                        controller: `CatController`
+                    },
+                    'cat@work': {
+                        templateUrl: `partials/work.tadoo.cat.html`,
                         controller: `CatController`,
-                        // views: {
-                        //     'list@work': {
-                        //         templateUrl: `partials/work.tadoo.list.html`,
-                        //         controller: `ListController`
-                        //     }
-                        // }
                     },
                     'list@work': {
                         templateUrl: `partials/work.tadoo.list.html`,

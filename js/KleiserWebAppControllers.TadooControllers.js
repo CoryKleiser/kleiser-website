@@ -4,9 +4,22 @@
 //: Set up Locations Controller
     var TadooControllers = angular.module(`TadooControllers`, []);
 
-    //Category Controller
-        TadooControllers.controller(`CatController`, function ($scope, $location, locate) {
+        TadooControllers.controller(`TadooMainController`, function ($rootScope) {
+            $rootScope.tadooView = `cat`;
+        });
 
+    //Category Controller
+        TadooControllers.controller(`CatController`, function ($rootScope, $scope, $location, locate) {
+
+            $scope.goList = function(hash){
+                if (true/*locate.userLocation != undefined*/){
+                    $rootScope.view = `list`;
+                }
+                else{
+                    alert(`Please wait while we locate you.`);
+                }
+
+            }
             //Set Up Google Map and Location
             //Calls findUser fn from the locate Service
             $scope.userLocation = locate.findUser;
