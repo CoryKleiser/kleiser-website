@@ -11,22 +11,23 @@
         locate.map;
         locate.userLocation;
 
-        locate.findUser = function(){
+
+        locate.geoLocate = function() {
             return new Promise(function (resolve, reject) {
-
-
                 navigator.geolocation.getCurrentPosition(function (position) {
                     locate.userLocation = {
                         lat: position.coords.latitude,
                         lng: position.coords.longitude
                     };
-                });
-                locate.map = new google.maps.Map($('#mapContainer'), {
-                    center: locate.userLocation,
-                    zoom: 14,
+                    console.log(`test user location \nlatval: ${locate.userLocation.lat} \nlngval: ${locate.userLocation.lng}`);
+                    locate.map = new google.maps.Map($('#mapContainer'), {
+                        center: locate.userLocation,
+                        zoom: 14,
+                    });
                 });
 
-                return (locate.userLocation);
+                resolve(locate.userLocation);
+                reject(console.log(`uh oh`));
             });
         };
     });

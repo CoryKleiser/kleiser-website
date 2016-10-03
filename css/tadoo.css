@@ -16,13 +16,6 @@ header b{
 .info-content{
     color:#3b629d;
 }
-a{
-    text-decoration:none;
-    color:#dee9fa;
-}
-a:link{
-    text-decoration: none;
-}
 a:visited{
     color: #dee9fa;
 }

@@ -260,6 +260,10 @@
         }
     });
 
+    pageDirectives.directive(`tadooEvent`, function () {
+
+    });
+
     pageDirectives.directive(`deleteContactEvent`, function (localStorage) {
         return{
             restrict: 'C',
