@@ -39,6 +39,10 @@
     //feature3 controller
     pageControllers.controller(`ContactListController`, function ($rootScope, $scope, localStorage) {
         $rootScope.localData = new PouchDB(`contactList`);
+
+        const emailValidate = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/i;
+        const phoneValidate = /^\+?[0-9]*(\([0-9]*\))?[0-9-]*[0-9]$/;
+
         $scope.newContact = {
             name: ``,
             email: ``,
@@ -58,7 +62,13 @@
         $scope.submit = function () {
             //TODO:: validation
             if (!$scope.newContact.name || !$scope.newContact.email || !$scope.newContact.phone) {
-                alert(`Please Fill Each Field`);
+                alert(`Please Fill Every Field`);
+            }
+            else if(!emailValidate.test($scope.newContact.email)){
+                alert(`Please enter a (semi) valid email address`);
+            }
+            else if(!phoneValidate.test($scope.newContact.phone)){
+                alert(`please enter a ten digit phone number`);
             }
             else {
                 $scope.newContact.createdOn = new Date();

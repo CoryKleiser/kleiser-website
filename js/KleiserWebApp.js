@@ -6,7 +6,7 @@
         `pageControllers`,
         // `TadooControllers`,
         `pageServices`,
-        `tadooServices`,
+        // `tadooServices`,
         `contactListServices`,
         `pageDirectives`,
     ]);
