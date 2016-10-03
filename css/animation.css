@@ -14,7 +14,7 @@
 }
 
 .feature-show-hide {
-    transition: all linear 1s;
+    transition: all linear .5s;
     height:auto;
 }
 .feature-show-hide.ng-hide {
