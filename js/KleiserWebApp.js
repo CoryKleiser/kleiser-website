@@ -4,7 +4,7 @@
         `ui.router`,
         `ngAnimate`,
         `pageControllers`,
-        `TadooControllers`,
+        // `TadooControllers`,
         `pageServices`,
         `tadooServices`,
         `contactListServices`,
@@ -28,16 +28,16 @@
                     },
                     'feature1@work': {
                         templateUrl: `partials/work.tadoo.html`,
-                        controller: `CatController`
+                        // controller: `CatController`
                     },
-                    'cat@work': {
-                        templateUrl: `partials/work.tadoo.cat.html`,
-                        controller: `CatController`,
-                    },
-                    'list@work': {
-                        templateUrl: `partials/work.tadoo.list.html`,
-                        controller: `ListController`,
-                    },
+                    // 'cat@work': {
+                    //     templateUrl: `partials/work.tadoo.cat.html`,
+                    //     controller: `CatController`,
+                    // },
+                    // 'list@work': {
+                    //     templateUrl: `partials/work.tadoo.list.html`,
+                    //     controller: `ListController`,
+                    // },
                     'feature2@work' : {
                         templateUrl: 'partials/work.greatpicks.html',
                         // controller: 'GreatPicksController',
