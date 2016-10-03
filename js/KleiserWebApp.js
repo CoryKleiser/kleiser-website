@@ -38,11 +38,11 @@
                     },
                     'list@work': {
                         templateUrl: `partials/work.tadoo.list.html`,
-                        controller: `ListController`
+                        controller: `ListController`,
                     },
                     // 'feature2@work' : {
-                    //     templateUrl: 'tpls/views/sidebar.html',
-                    //     controller: 'MyCtrl',
+                    //     templateUrl: 'partials/work.greatpicks.html',
+                    //     controller: 'GreatPicksController',
                     // },
                     'feature3@work': {
                         templateUrl: `partials/work.contactlist.html`,
@@ -55,7 +55,7 @@
             templateUrl: `partials/about.html`,
             controller: `AboutController`
             })
-            .state(`contact`, {
+        .state(`contact`, {
             url: `/contact`,
             templateUrl: `partials/contact.html`,
             controller: `ContactController`

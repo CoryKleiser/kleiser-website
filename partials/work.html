@@ -22,6 +22,7 @@
                     </div>
                     <!--TODO:: implement Tadoo! app (fix reviews first) app drop down-->
                     <div class="content-area feature-show-hide" ng-show="feature1" ui-view="feature1"></div>
+                    <div class="content-area feature-show-hide" ui-view="list"></div>
                 </div>
             </section>
 
@@ -48,7 +49,7 @@
                 <div class="border">
                 <div class="btn-group-vertical features" id="feature3">
                     <!--app dropdown-->
-                    <button class="btn btn-default btn-block"ng-click="feature3 = !feature3">
+                    <button class="btn btn-default btn-block" ng-click="feature3 = !feature3"> <!--ui-sref=".feature3">-->
                         <h2>Contact List</h2>
                     </button>
 
@@ -58,7 +59,7 @@
                         View Github
                     </a>
                 </div>
-                <div class="content-area feature-show-hide" id="contactList" ng-show="feature3" ui-view="feature3"></div>
+                <div class="content-area feature-show-hide" id="contactList" ng-show="feature3" ui-view=".feature3"></div>
                 </div>
 
             </section>
