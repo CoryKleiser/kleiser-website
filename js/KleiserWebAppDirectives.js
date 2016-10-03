@@ -260,8 +260,28 @@
         }
     });
 
-    pageDirectives.directive(`tadooEvent`, function () {
+    pageDirectives.directive(`tadooEvent`, function ($state, locate) {
+        return{
+            link: function($scope, $element){
+                $element.bind('click', function($event){
+                    if (locate.userLocation != undefined){
 
+                        console.log(`test goList`, locate.userLocation);
+
+                        var currentState = $state.current;
+                        console.log(`Current State:::\n${currentState}`);
+
+
+
+                        $element.parent().parent().parent().parent().parent().attr('ui-view', "list");
+                        $state.go('list');
+                    }
+                    else{
+                        alert(`Please wait while we locate you.`);
+                    }
+                });
+            }
+        }
     });
 
     pageDirectives.directive(`deleteContactEvent`, function (localStorage) {

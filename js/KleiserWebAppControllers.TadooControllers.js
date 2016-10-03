@@ -11,21 +11,20 @@
     //Category Controller
         TadooControllers.controller(`CatController`, function ($rootScope, $scope, locate) {
             $rootScope.tadooView = `cat`;
-            $scope.goList = function(hash){
-                if (true/*locate.userLocation != undefined*/){
-
-                    console.log(`test goList`, locate.userLocation);
-
-                    console.log($scope.userLocation);
-
-                    $rootScope.tadooView = `list`;
-                    $rootScope.$apply();
-                }
-                else{
-                    alert(`Please wait while we locate you.`);
-                }
-
-            }
+            // $scope.goList = function(hash){
+            //     if (locate.userLocation != undefined){
+            //
+            //         console.log(`test goList`, locate.userLocation);
+            //
+            //         console.log($scope.userLocation);
+            //
+            //         $rootScope.tadooView = `list`;
+            //     }
+            //     else{
+            //         alert(`Please wait while we locate you.`);
+            //     }
+            //
+            // }
             //Set Up Google Map and Location
             //Calls findUser fn from the locate Service
             $scope.userLocation = locate.geoLocate();
