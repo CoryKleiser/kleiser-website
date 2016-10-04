@@ -40,8 +40,8 @@
     pageControllers.controller(`ContactListController`, function ($rootScope, $scope, localStorage) {
         $rootScope.localData = new PouchDB(`contactList`);
 
-        const emailValidate = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/i;
-        const phoneValidate = /^\+?[0-9]*(\([0-9]*\))?[0-9-]*[0-9]$/;
+        var emailValidate = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/i;
+        var phoneValidate = /^\+?[0-9]*(\([0-9]*\))?[0-9-]*[0-9]$/;
 
         $scope.newContact = {
             name: ``,
