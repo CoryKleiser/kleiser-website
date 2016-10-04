@@ -163,7 +163,8 @@ h2{
     border:none;
 }
 #works .btn-default h2:hover{
-    font-size: 250%;
+    font-size: 35px;
+    margin: 12px;
 }
 #works .btn-info{
     background: rgba(236, 236, 236, 0.7);
@@ -225,6 +226,10 @@ h2{
     .img-responsive{
         max-width:80%;
         padding-bottom: 30px;
+    }
+    #works .btn-default h2:hover{
+        font-size: 30px;
+        margin:20px 0 10px 0;
     }
 }
 
