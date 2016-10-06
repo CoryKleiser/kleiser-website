@@ -43,16 +43,23 @@ a:hover, a:focus {
 /*:FOOTER STYLES*/
 footer{
     background-color:#222;
-    height: 75px;
+    height: 45px;
     width: 100%;
 }
 .fixFooter{
     position: fixed;
     bottom: 0;
 }
+.fixFooter img{
+    width: 75%;
+}
 footer a{
-    width: 75px;
-    padding-top: 17px;
+    padding: 8px 0 0 5px;
+    opacity: .6;
+
+}
+footer a:hover{
+    opacity: 1;
 }
 
 /*: INTRO STYLES*/
