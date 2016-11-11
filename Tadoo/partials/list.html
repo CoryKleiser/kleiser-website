@@ -1,0 +1,74 @@
+<section id="list">
+    <div class="container-fluid">
+        <div class="row">
+            <header>
+                <div class="container-fluid">
+                    <div class="row">
+                        <span class="col-xs-1 col-xs-offset-1 h3">where </span>
+                    </div>
+                    <span class="col-xs-offset-2 h2">
+                        {{catHeader}}?
+
+                        <span role="button" class="pull-right glyphicon glyphicon-cd" id="btn-radius"
+                            aria-label="Change search radius." aria-hidden="true"
+                            ng-click="radius = !radius">
+                        </span>
+                </span>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <form name="radiusform" novalidate ng-submit="getLocations()">
+                                    <div class="pull-right">
+                                        <label for="inputradius" class="sr-only">Search Radius: </label>
+                                        <input type="number" id="inputradius" class="form-control feature-show-hide"
+                                               placeholder="Search Radius" ng-show="!radius" ng-model="radiusMiles">
+                                        <button id="setradius" type="submit" class="btn btn-primary feature-show-hide"
+                                                ng-show="!radius" ng-click="radius = !radius">
+                                            <span class="glyphicon glyphicon-ok feature-show-hide"></span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+            </header>
+
+
+            <section>
+                <div class="col-xs-12 text-center"  id="content">
+                    <ul class="list-unstyled" >
+                        <div>
+                            <li ng-repeat="place in locations">
+                                <a href="#/info/{{place.index}}" class="text-left">
+
+                                        <span class="btn btn-success btn-lg btn-block h2 clear-fix">
+                                            <span class="pull-left">{{place.name}}</span>&nbsp;
+                                            <span class="pull-right glyphicon glyphicon-ok hidden-md hidden-lg" id="rating">&nbsp;{{place.googleRating}}</span>
+                                        </span>
+
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </section>
+            <footer id="footer" class="text-center fixFooter">
+                <div class="container-fluid">
+                    <div class="col-xs-2 col-xs-offset-4">
+                        <a href="#/categories/">
+                            <span class="h2">
+                                <span class="glyphicon glyphicon-home" aria-label="Go to Tadoo Homepage" aria-hidden="true"></span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-xs-2">
+                        <a href="#">
+                            <span class="h2 link">
+                                <span class="glyphicon glyphicon-circle-arrow-left" ng-click="goBack()" aria-label="Go back to places list." aria-hidden="true"></span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</section>

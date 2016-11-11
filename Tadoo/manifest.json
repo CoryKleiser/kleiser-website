@@ -1,0 +1,17 @@
+{
+  "short_name": "Tadoo!",
+  "name": "Tadoo! Manifest",
+  "icons": [
+    {
+      "src": "images/app-icon.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "density": 3.0
+    }
+  ],
+  "theme_color": "#0990ca",
+  "background_color": "#0990ca",
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait"
+}

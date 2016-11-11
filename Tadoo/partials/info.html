@@ -1,0 +1,85 @@
+<!--TODO:: Fix phone number to work in link (take spaces out)-->
+<section id="info">
+    <div class="container-fluid">
+        <div class="row">
+            <!--:: use static street view for image-->
+            <header>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-8 col-xs-offset-2 round">
+                            <img ng-src="https://maps.googleapis.com/maps/api/streetview?size=600x300&location={{details.formatted_address}}&key=AIzaSyDWZrRehIVMZXDSp2YLcyv5J2z-4hb7tGc"
+                                 alt="Google street view of location" class="img-rounded img-responsive center-block">
+                        </div>
+                        <div class="col-xs-2">
+                            <img ng-src="{{placeInfo.photo}}" alt="Category Icon" class="img-responsive center-block">
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!--layout with bootstrap-->
+            <section>
+                <div class="col-xs-12 text-center" id="content">
+                    <h2>{{ placeInfo.name }}</h2>
+                    <div class="col-xs-4">
+                        <a role="button" class="btn btn-info btn-block btn-md" target="_blank" href="tel:{{phone}}">Call</a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a role="button" class="btn btn-info btn-block btn-md" target="_blank" href="{{details.url}}">Directions</a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a role="button" class="btn btn-info btn-block btn-md" target="_blank" href="{{details.website}}">Website</a>
+                    </div>
+
+                    <section id="reviews">
+
+                            <h4>Reviews</h4>
+
+                        <div class="container-fluid">
+                            <div class="row">
+                                <!--:: fix all layouts to span 12 cols-->
+                                    <section class="col-xs-12" ng-repeat="review in details.reviews">
+                                        <!-- : figure out how to make layout uniform-->
+                                        <div class="panel panel-default">
+                                                <div class="container-fluid">
+                                                    <div class="panel-header">
+                                                        <h4>
+                                                            <span class="panel-title">{{review.author_name}}</span>
+                                                            <span class="pull-right h5">{{review.rating}}/5</span>
+                                                        </h4>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <p class="text-left">
+                                                            {{review.text}}</p>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+
+            <footer id="footer" class="text-center fixFooter">
+                <div class="container-fluid">
+                    <div class="col-xs-2 col-xs-offset-4">
+                        <a href="#/categories/">
+                            <span class="h2">
+                                <span class="glyphicon glyphicon-home" aria-label="Go to Tadoo Homepage" aria-hidden="true"></span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-xs-2">
+                        <a href="#">
+                            <span class="h2 link">
+                                <span class="glyphicon glyphicon-circle-arrow-left" ng-click="goBack()" aria-label="Go back to places list." aria-hidden="true"></span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,9 @@
+.feature-show-hide {
+    display: inline;
+    transition: all linear .5s;
+    height:auto;
+    width:auto;
+}
+.feature-show-hide.ng-hide {
+    opacity: 0;
+}
