@@ -19,12 +19,6 @@ tadooApp.config([`$routeProvider`, function ($routeProvider) {
         templateUrl: `partials/info.html`,
         controller: `InfoController`,
     }).
-/*
-    when(`/map/`, {
-        templateUrl: `partials/map.html`,
-        controller: `CatController`
-    }).
-*/
     otherwise({
         redirectTo: `/categories/`
     });

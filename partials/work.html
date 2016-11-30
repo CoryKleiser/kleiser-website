@@ -6,7 +6,26 @@
         <section id="programming">
             <legend>Programming</legend>
 
-            <section class="col-sm-4">
+            <section class="col-sm-6 col-md-3">
+                <div class="border">
+                    <div class="btn-group-vertical features" id="feature0">
+                        <!--app dropdown button-->
+                        <button class="btn btn-default btn-block" ng-click="feature0 = !feature0">
+                            <h2>Fitness Geek</h2>
+                        </button>
+
+                        <a class="btn btn-info" role="button"
+                           href="https://github.uc.edu/williswm/4045_FitnessGeek" target="_blank"
+                           title="Click to view code on github!">
+                            Fitness Geek on github
+                        </a>
+                    </div>
+                    <!--TODO:: implement Fitness Geek! (fix reviews first) app drop down-->
+                    <div class="content-area feature-show-hide" ng-show="feature0" ui-view="feature0"></div>
+                </div>
+            </section>
+
+            <section class="col-sm-6 col-md-3">
                 <div class="border">
                     <div class="btn-group-vertical features" id="feature1">
                         <!--app dropdown button-->
@@ -20,12 +39,12 @@
                             Tadoo! on github
                         </a>
                     </div>
-                    <!--TODO:: implement Tadoo! app (fix reviews first) app drop down-->
+                    <!--:: implement Tadoo! app (fix reviews first) app drop down-->
                     <div class="content-area feature-show-hide" ng-show="feature1" ui-view="feature1"></div>
                 </div>
             </section>
 
-            <section class="col-sm-4">
+            <section class="col-sm-6 col-md-3">
                 <div class="border">
                     <div class="btn-group-vertical features" id="feature2">
                         <!--app dropdown button-->
@@ -44,7 +63,7 @@
                 </div>
             </section>
 
-            <section class="col-sm-4">
+            <section class="col-sm-6 col-md-3">
                 <div class="border">
                 <div class="btn-group-vertical features" id="feature3">
                     <!--app dropdown-->
@@ -62,6 +81,7 @@
                 </div>
 
             </section>
+
         </section>
     </div>
 </section>

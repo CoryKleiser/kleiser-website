@@ -4,9 +4,7 @@
         `ui.router`,
         `ngAnimate`,
         `pageControllers`,
-        // `TadooControllers`,
         `pageServices`,
-        // `tadooServices`,
         `contactListServices`,
         `pageDirectives`,
     ]);
@@ -24,23 +22,16 @@
                 controller: 'WorkController',
                 views: {
                     '': {
-                        templateUrl: 'partials/work.html',
+                        templateUrl: 'partials/work.html'
+                    },
+                    'feature0@work': {
+                        templateUrl: `partials/work.fitnessgeek.html`
                     },
                     'feature1@work': {
-                        templateUrl: `partials/work.tadoo.html`,
-                        // controller: `CatController`
+                        templateUrl: `partials/work.tadoo.html`
                     },
-                    // 'cat@work': {
-                    //     templateUrl: `partials/work.tadoo.cat.html`,
-                    //     controller: `CatController`,
-                    // },
-                    // 'list@work': {
-                    //     templateUrl: `partials/work.tadoo.list.html`,
-                    //     controller: `ListController`,
-                    // },
                     'feature2@work' : {
-                        templateUrl: 'partials/work.greatpicks.html',
-                        // controller: 'GreatPicksController',
+                        templateUrl: 'partials/work.greatpicks.html'
                     },
                     'feature3@work': {
                         templateUrl: `partials/work.contactlist.html`,
